@@ -1,25 +1,29 @@
 import Link from "next/link";
-// Import from react-icons instead of lucide-react
+import Image from "next/image"; // Import Image from next/image
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 export const FooterBrand = () => {
   return (
     <div className="flex flex-col pr-0 lg:pr-8">
-      {/* Replace with your actual Logo/SVG if needed */}
+      
+      {/* Actual Logo Image */}
       <Link href="/" className="inline-block">
-        <h3 className="font-serif text-4xl text-white tracking-wide">
-          Sreshta
-        </h3>
-        <span className="text-xs text-[#C9A86A] tracking-[0.3em] uppercase mt-1 block">
-          Ayurvedic Hospital
-        </span>
+        <div className="relative w-[180px] h-[60px]"> {/* Adjust width/height container as needed */}
+          <Image
+            src="/images/sreshta-logo.png" // Replace with your actual logo path
+            alt="Sreshta Ayurvedic Hospital Logo"
+            fill
+            className="object-contain object-left"
+            priority // Helps load the logo faster
+          />
+        </div>
       </Link>
 
-      <p className="mt-6 text-gray-300 leading-relaxed">
+      {/* <p className="mt-6 text-gray-300 leading-relaxed">
         Providing authentic Ayurvedic healthcare, personalized treatments, and holistic wellness solutions designed to restore balance and grant you a healthier life.
-      </p>
+      </p> */}
 
-      {/* Social Icons - Now using react-icons */}
+      {/* Social Icons */}
       <div className="mt-8 flex gap-4">
         <a
           href="https://facebook.com"

@@ -10,7 +10,7 @@ export const NavLogo = () => {
       <Image
         src="/images/sreshta-logo.png"
         alt="Sreshta Ayurvedic Way of Advanced Care Logo"
-        width={185}
+        width={160}
         height={30}
         priority
       />
