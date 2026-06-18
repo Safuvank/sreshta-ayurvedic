@@ -27,7 +27,7 @@ export const HospitalFacilities = () => {
         {/* Integrated Section Heading */}
         <div className="mb-16">
           <SectionHeading
-            eyebrow="Why Choose Us"
+            // eyebrow="Why Choose Us"
             title="Why People Choose Sreshta"
             // description="Experience world-class holistic wellness powered by authentic traditions and modern medical standards."
             align="center"

@@ -8,7 +8,7 @@ export const FooterBottom = () => {
       <div className="flex flex-col items-center justify-between gap-6 text-sm text-gray-400 md:flex-row">
         
         <p>
-          © {currentYear} Sreshta Ayurvedic Hospital. All rights reserved.
+          © 2023 - {currentYear} Sreshta-Ayurvedic Way of Advanced Care. All rights reserved.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">

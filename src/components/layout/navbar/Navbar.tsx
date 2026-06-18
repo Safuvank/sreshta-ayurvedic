@@ -71,7 +71,7 @@ export const Navbar = () => {
       // Use 'fixed' so it can appear when scrolling up from anywhere on the page
       className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#1F3D35]/95 backdrop-blur-md shadow-lg py-1" // Dark premium glass background when mid-page
+          ? "bg-[#1F3D35]/95 backdrop-blur-md shadow-lg py-3" // Dark premium glass background when mid-page
           : "bg-transparent/45 py-6 md:py-8" // Transparent at the very top
       }`}
     >

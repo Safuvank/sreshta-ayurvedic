@@ -31,7 +31,7 @@ export const FooterContact = () => {
 
         {/* Emails (Stacked using flex-col) */}
         <div className="flex items-start gap-4 text-gray-300">
-          <Mail className="mt-1 h-5 w-5 flex-shrink-0 text-[#C9A86A]" />
+          <Mail className="mt-1 h-5 w-5 shrink-0 text-[#C9A86A]" />
           <div className="flex flex-col gap-1.5">
             <a href="mailto:sreshtacalicut@gmail.com" className="transition-colors hover:text-[#C9A86A]">
               sreshtacalicut@gmail.com
