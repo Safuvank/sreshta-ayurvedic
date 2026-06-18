@@ -3,8 +3,8 @@ export const featuredTestimonial = {
   treatment: "Complete Panchakarma Detox",
   quote:
     "After struggling with chronic fatigue and joint inflammation for years, my 21-day stay here completely gave me my life back. The dedication of the doctors and the authenticity of the treatments are unmatched.",
-  image: "/images/doctor.jpg",
-  videoThumbnail: "/images/doctor.jpg",
+  image: "/images/person.jpg",
+  videoThumbnail: "/images/person.jpg",
 };
 
 export const testimonials = [
@@ -13,7 +13,7 @@ export const testimonials = [
     name: "Rahul Menon",
     treatment: "Panchakarma",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "The treatment completely transformed my health. The doctors and staff were incredibly supportive throughout my healing journey.",
   },
@@ -22,7 +22,7 @@ export const testimonials = [
     name: "Anjali Nair",
     treatment: "Orthopedic Care",
     rating: 5,
-    image: "/images/doctor.jpg",
+   image: "/images/person.jpg",
     review:
       "I experienced significant improvement in my joint pain after the treatment. The traditional therapies used here are truly effective.",
   },
@@ -31,7 +31,7 @@ export const testimonials = [
     name: "Fathima",
     treatment: "Lifestyle Disease Management",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "The personalized Ayurvedic approach helped me regain energy, balance my metabolism, and improve my overall quality of life.",
   },
@@ -40,7 +40,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -49,7 +49,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -58,7 +58,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -67,7 +67,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/doctor.jpg",
+   image: "/images/person.jpg",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -76,7 +76,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -85,17 +85,10 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/doctor.jpg",
+    image: "/images/person.jpg",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
   
 
 ];
-
-// export const trustMetrics = [
-//   { value: "5000+", label: "Patients Treated" },
-//   { value: "98%", label: "Patient Satisfaction" },
-//   { value: "50+", label: "Authentic Therapies" },
-//   { value: "20+", label: "Years Experience" },
-// ];

@@ -341,15 +341,11 @@
 
 
 
-
-
-
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image"; // 1. IMPORT NEXT.JS IMAGE COMPONENT
+import Image from "next/image"; 
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { navigation } from "./Navigation"; // Adjust path to your data file
@@ -418,20 +414,19 @@ export const MobileNav = () => {
             className="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col pt-24 overflow-hidden"
           >
             
-            {/* --- 2. ADD BRAND LOGO ELEMENT HERE --- 
-              Perfectly aligned with 'top-5' and symmetrical margins 'left-4 md:left-8'
+            {/* --- MATCHED LOGO ELEMENT --- 
+              Changed to 'fixed' and added 'h-11 flex items-center' to perfectly mirror 
+              the trigger button layout properties on the right side.
             */}
-            <div className="absolute top-5 left-4 md:left-8 z-[102]">
+            <div className="fixed top-5 left-4 md:left-8 z-[102] h-11 flex items-center">
               <Link href="/" onClick={closeNav} className="flex items-center">
                 <Image
                   src="/images/sreshta-logo-color.png"
                   alt="Sreshta Logo"
-                  width={140} // Explicit mobile-balanced width
+                  width={140} 
                   height={35}
                   priority
-                  className="object-contain opacity-90" 
-                  // Note: The invert class forces a white text logo to turn dark on the white menu background. 
-                  // If your logo file is already dark/colored, remove the "filter invert brightness-0" classes!
+                  className="object-contain  opacity-90" 
                 />
               </Link>
             </div>

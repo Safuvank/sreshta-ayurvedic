@@ -16,7 +16,7 @@ export const TestimonialsPreview = () => {
         <SectionHeading
           eyebrow="Patient Stories"
           title="Trusted By Our Patients"
-          description="Read genuine experiences from individuals who found recovery and wellness through our authentic therapies."
+          // description="Read genuine experiences from individuals who found recovery and wellness through our authentic therapies."
         />
 
         {/* Split Layout: Video Left, Auto-Slider Right */}
