@@ -345,11 +345,11 @@
 
 
 
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image"; // 1. IMPORT NEXT.JS IMAGE COMPONENT
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { navigation } from "./Navigation"; // Adjust path to your data file
@@ -392,6 +392,7 @@ export const MobileNav = () => {
         }`}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
+        {/* Custom Asymmetrical Morphing Lines */}
         <div className="flex flex-col items-end justify-center gap-[5px] w-5 h-4 relative">
           <motion.span
             animate={isOpen ? { rotate: 45, y: 4, width: "20px" } : { rotate: 0, y: 0, width: "20px" }}
@@ -416,6 +417,25 @@ export const MobileNav = () => {
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col pt-24 overflow-hidden"
           >
+            
+            {/* --- 2. ADD BRAND LOGO ELEMENT HERE --- 
+              Perfectly aligned with 'top-5' and symmetrical margins 'left-4 md:left-8'
+            */}
+            <div className="absolute top-5 left-4 md:left-8 z-[102]">
+              <Link href="/" onClick={closeNav} className="flex items-center">
+                <Image
+                  src="/images/sreshta-logo-color.png"
+                  alt="Sreshta Logo"
+                  width={140} // Explicit mobile-balanced width
+                  height={35}
+                  priority
+                  className="object-contain opacity-90" 
+                  // Note: The invert class forces a white text logo to turn dark on the white menu background. 
+                  // If your logo file is already dark/colored, remove the "filter invert brightness-0" classes!
+                />
+              </Link>
+            </div>
+
             {/* Scrollable Links Container */}
             <div className="flex-1 overflow-y-auto px-6 py-8 flex flex-col gap-2 max-w-md mx-auto w-full">
               {navigation.map((item) => (
@@ -424,7 +444,7 @@ export const MobileNav = () => {
                     <div className="flex flex-col">
                       <button
                         onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                        className="flex justify-between items-center py-4 text-2xl text-[#1F3D35] w-full text-left group"
+                        className="flex justify-between items-center py-4 text-2xl font-serif text-[#1F3D35] w-full text-left group"
                       >
                         <span className="transition-colors group-hover:text-[#C9A86A]">{item.label}</span>
                         <ChevronDown className={`w-5 h-5 transition-transform text-[#C9A86A] duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`} />
@@ -489,14 +509,10 @@ export const MobileNav = () => {
                       </AnimatePresence>
                     </div>
                   ) : (
-                    /* 
-                      FIXED: Changed text-2x1 (typo) to text-2xl 
-                      and added font-serif to match the category headers perfectly.
-                    */
                     <Link
                       href={item.href as string}
                       onClick={closeNav}
-                      className="block py-4 text-2xl text-[#1F3D35] hover:text-[#C9A86A] transition-colors"
+                      className="block py-4 text-2xl font-serif text-[#1F3D35] hover:text-[#C9A86A] transition-colors"
                     >
                       {item.label}
                     </Link>
