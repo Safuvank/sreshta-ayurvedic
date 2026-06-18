@@ -235,9 +235,9 @@ export const MobileNav = () => {
               className="fixed right-0 top-0 h-[100dvh] w-[90vw] max-w-sm bg-white z-[100] shadow-2xl flex flex-col"
             >
               <div className="p-6 flex justify-between items-center border-b border-gray-100">
-                <span className="text-sm font-bold tracking-[0.2em] text-[#C9A86A] uppercase">
+                {/* <span className="text-sm font-bold tracking-[0.2em] text-[#C9A86A] uppercase">
                   Menu
-                </span>
+                </span> */}
                 <button
                   onClick={closeNav}
                   className="p-2 text-gray-400 hover:text-[#1F3D35] hover:bg-gray-100 rounded-full transition-colors"
@@ -253,7 +253,7 @@ export const MobileNav = () => {
                       <div className="flex flex-col">
                         <button
                           onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                          className="flex justify-between items-center py-4 text-xl font-serif text-[#1F3D35] w-full text-left"
+                          className="flex justify-between items-center py-4 text-xl text-[#1F3D35] w-full text-left"
                         >
                           {item.label}
                           <ChevronDown className={`w-5 h-5 transition-transform text-[#C9A86A] ${openDropdown === item.label ? "rotate-180" : ""}`} />
@@ -319,7 +319,7 @@ export const MobileNav = () => {
                       <Link
                         href={item.href as string}
                         onClick={closeNav}
-                        className="block py-4 text-xl font-serif text-[#1F3D35] hover:text-[#C9A86A]"
+                        className="block py-4 text-xl text-[#1F3D35] hover:text-[#C9A86A]"
                       >
                         {item.label}
                       </Link>

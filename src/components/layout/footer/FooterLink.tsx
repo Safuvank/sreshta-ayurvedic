@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "/abouts" },
   { label: "Our Treatments", href: "/treatments" },
   { label: "Wellness Services", href: "/services" },
   { label: "Meet Our Doctors", href: "/doctors" },

@@ -17,7 +17,7 @@ export const ConsultationStrip = () => {
           </div>
 
           <Link
-            href="/contact"
+            href="/contacts"
             className="group flex flex-shrink-0 items-center gap-2 rounded-full bg-[#1F3D35] px-8 py-4 font-medium text-white transition-all duration-300 hover:bg-[#152a24] hover:shadow-lg hover:shadow-[#1F3D35]/20"
           >
             Book Appointment

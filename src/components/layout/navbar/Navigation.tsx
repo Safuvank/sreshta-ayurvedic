@@ -20,7 +20,6 @@ export const navigation = [
       },
       {
         label: "Services",
-        // Replaced href with children array for the nested dropdown
         children: [
           { label: "Ayurveda Therapies", href: "/services/ayurveda-therapies" },
           { label: "Beauty Therapies", href: "/services/beauty-therapies" },
@@ -38,14 +37,14 @@ export const navigation = [
   {
     label: "Support",
     children: [
-      { label: "Contact", href: "/contact" },
+      { label: "Contact", href: "#" },
       { label: "Our Doctors", href: "/doctors" },
     ],
   },
   {
     label: "Company",
     children: [
-      { label: "About", href: "/about" },
+      { label: "About", href: "#" },
       { label: "Gallery", href: "/gallery" },
     ],
   },

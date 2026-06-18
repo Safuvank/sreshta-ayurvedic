@@ -25,7 +25,7 @@ export const AboutCTA = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contacts"
               className="group flex items-center gap-2 rounded-full bg-[#2F5D50] px-8 py-4 font-medium text-white transition-all hover:bg-[#24483E] hover:shadow-lg"
             >
               <CalendarCheck className="w-5 h-5 transition-transform group-hover:scale-110" />
@@ -33,7 +33,7 @@ export const AboutCTA = () => {
             </Link>
 
             <Link
-              href="/contact"
+              href="/contacts"
               className="group flex items-center gap-2 rounded-full border-2 border-[#2F5D50] px-8 py-4 font-medium text-[#2F5D50] transition-all hover:bg-[#2F5D50] hover:text-white"
             >
               <PhoneCall className="w-5 h-5 transition-transform group-hover:scale-110" />

@@ -63,7 +63,7 @@ export const FeaturedDoctor = () => {
         </div>
 
         <Link
-          href="/contact"
+          href="/contacts"
           className="group inline-flex items-center gap-3 bg-[#C9A86A] text-[#1F3D35] px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-white w-fit"
         >
           Book Priority Consultation

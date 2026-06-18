@@ -43,7 +43,7 @@ export const WhyChooseUs = () => {
           >
             {reasons.map((reason, idx) => (
               <div key={idx} className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <ShieldCheck className="w-6 h-6 text-[#C9A86A] flex-shrink-0" />
+                <ShieldCheck className="w-6 h-6 text-[#C9A86A] shrink-0" />
                 <span className="font-medium text-gray-800">{reason}</span>
               </div>
             ))}
