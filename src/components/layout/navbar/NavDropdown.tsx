@@ -289,7 +289,7 @@ export const NavDropdown = ({ item }: { item: any }) => {
       className={`group flex w-full items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${
         isActiveLink
           ? "bg-[#F8F5EF] text-[#6c705d] font-medium"
-          : "text-gray-700 hover:bg-[#F8F5EF]/80 hover:text-[#26c705d]"
+          : "text-gray-700 hover:bg-[#bfddeb]/80 hover:text-[#26c705d]"
       }`}
     >
       <span className="text-sm font-medium">{label}</span>

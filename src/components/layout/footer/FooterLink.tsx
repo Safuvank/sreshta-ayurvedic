@@ -13,7 +13,7 @@ const links = [
 export const FooterLinks = () => {
   return (
     <div>
-      <h4 className="font-serif text-xl text-white mb-6">Quick Links</h4>
+      <h4 className=" text-xl text-white mb-6">Quick Links</h4>
 
       <ul className="space-y-3.5">
         {links.map((link) => (

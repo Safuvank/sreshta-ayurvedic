@@ -10,7 +10,7 @@ import { VideoTestimonialHighlight } from "./VideoTestimonialHighlight";
 
 export const TestimonialsPreview = () => {
   return (
-    <section className="bg-[#FAFAFA] py-20 lg:py-32 relative overflow-hidden">
+    <section className="bg-[#FAFAFA] py-15 lg:py-25 relative overflow-hidden">
       <Container>
         {/* Section Header */}
         <SectionHeading

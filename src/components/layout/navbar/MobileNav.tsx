@@ -1,5 +1,3 @@
-
-
 // "use client";
 
 // import { useState } from "react";
@@ -22,8 +20,8 @@
 
 //   return (
 //     <div className="lg:hidden flex items-center relative z-[101]">
-//       <button 
-//         onClick={() => setIsOpen(true)} 
+//       <button
+//         onClick={() => setIsOpen(true)}
 //         className="p-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white shadow-sm"
 //       >
 //         <Menu className="w-5 h-5" />
@@ -157,9 +155,6 @@
 //   );
 // };
 
-
-
-
 // "use client";
 
 // import { useState } from "react";
@@ -182,10 +177,10 @@
 
 //   return (
 //     <div className="lg:hidden flex items-center relative z-[101]">
-      
+
 //       {/* --- MODERN PREMIUM MENU TRIGGER --- */}
-//       <button 
-//         onClick={() => setIsOpen(true)} 
+//       <button
+//         onClick={() => setIsOpen(true)}
 //         className="group flex items-center gap-3 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white shadow-sm hover:bg-white/20 transition-all duration-300"
 //       >
 //         {/* <span className="text-xs font-bold tracking-[0.15em] uppercase mt-[1px]">
@@ -326,22 +321,11 @@
 //   );
 // };
 
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image"; 
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { navigation } from "./Navigation"; // Adjust path to your data file
@@ -372,10 +356,9 @@ export const MobileNav = () => {
 
   return (
     <div className="lg:hidden flex items-center">
-      
       {/* --- ICON-ONLY INTERACTIVE TRIGGER --- */}
-      <button 
-        onClick={() => setIsOpen(!isOpen)} 
+      <button
+        onClick={() => setIsOpen(!isOpen)}
         className={`fixed top-5 right-4 md:right-8 z-[101] flex items-center justify-center w-11 h-11 backdrop-blur-md border rounded-xl shadow-sm transition-all duration-500 ${
           isOpen
             ? "bg-[#1F3D35]/5 border-[#1F3D35]/10 text-[#1F3D35]"
@@ -386,12 +369,20 @@ export const MobileNav = () => {
         {/* Custom Asymmetrical Morphing Lines */}
         <div className="flex flex-col items-end justify-center gap-[5px] w-5 h-4 relative">
           <motion.span
-            animate={isOpen ? { rotate: 45, y: 4, width: "20px" } : { rotate: 0, y: 0, width: "20px" }}
+            animate={
+              isOpen
+                ? { rotate: 45, y: 4, width: "20px" }
+                : { rotate: 0, y: 0, width: "20px" }
+            }
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className={`h-[2px] rounded-full transition-colors duration-500 ${isOpen ? "bg-[#1F3D35]" : "bg-white"}`}
           />
           <motion.span
-            animate={isOpen ? { rotate: -45, y: -3, width: "20px" } : { rotate: 0, y: 0, width: "12px" }}
+            animate={
+              isOpen
+                ? { rotate: -45, y: -3, width: "20px" }
+                : { rotate: 0, y: 0, width: "12px" }
+            }
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className={`h-[2px] rounded-full transition-colors duration-500 ${isOpen ? "bg-[#1F3D35]" : "bg-white"}`}
           />
@@ -408,17 +399,16 @@ export const MobileNav = () => {
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col pt-24 overflow-hidden"
           >
-            
             {/* --- MATCHED LOGO ELEMENT --- */}
             <div className="fixed top-5 left-4 md:left-8 z-[102] h-11 flex items-center">
               <Link href="/" onClick={closeNav} className="flex items-center">
                 <Image
                   src="/images/sreshta-logo-color.png"
                   alt="Sreshta Logo"
-                  width={140} 
+                  width={140}
                   height={35}
                   priority
-                  className="object-contain opacity-90" 
+                  className="object-contain opacity-90"
                 />
               </Link>
             </div>
@@ -430,11 +420,17 @@ export const MobileNav = () => {
                   {item.children ? (
                     <div className="flex flex-col">
                       <button
-                        onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                        onClick={() =>
+                          setOpenDropdown(
+                            openDropdown === item.label ? null : item.label,
+                          )
+                        }
                         className="flex justify-between items-center py-4 text-2xl text-[#1F3D35] w-full text-left group"
                       >
                         <span className="transition-colors">{item.label}</span>
-                        <ChevronDown className={`w-5 h-5 transition-transform text-[#C9A86A] duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`} />
+                        <ChevronDown
+                          className={`w-5 h-5 transition-transform text-[#C9A86A] duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`}
+                        />
                       </button>
 
                       <AnimatePresence>
@@ -451,31 +447,44 @@ export const MobileNav = () => {
                                 {child.children ? (
                                   <>
                                     <button
-                                      onClick={() => setOpenSubDropdown(openSubDropdown === child.label ? null : child.label)}
+                                      onClick={() =>
+                                        setOpenSubDropdown(
+                                          openSubDropdown === child.label
+                                            ? null
+                                            : child.label,
+                                        )
+                                      }
                                       className="flex justify-between items-center py-3 text-base font-medium text-gray-700 w-full text-left"
                                     >
                                       <span>{child.label}</span>
-                                      <ChevronDown className={`w-4 h-4 transition-transform text-gray-400 duration-300 ${openSubDropdown === child.label ? "rotate-180" : ""}`} />
+                                      <ChevronDown
+                                        className={`w-4 h-4 transition-transform text-gray-400 duration-300 ${openSubDropdown === child.label ? "rotate-180" : ""}`}
+                                      />
                                     </button>
-                                    
+
                                     <AnimatePresence>
                                       {openSubDropdown === child.label && (
                                         <motion.div
                                           initial={{ height: 0, opacity: 0 }}
-                                          animate={{ height: "auto", opacity: 1 }}
+                                          animate={{
+                                            height: "auto",
+                                            opacity: 1,
+                                          }}
                                           exit={{ height: 0, opacity: 0 }}
                                           className="overflow-hidden flex flex-col gap-2 pl-4 border-l border-gray-200 ml-1 mt-1 pb-2"
                                         >
-                                          {child.children.map((subChild: any) => (
-                                            <Link
-                                              key={subChild.label}
-                                              href={subChild.href}
-                                              onClick={closeNav}
-                                              className="py-2 text-sm text-gray-500 hover:text-[#2F5D50] transition-colors"
-                                            >
-                                              {subChild.label}
-                                            </Link>
-                                          ))}
+                                          {child.children.map(
+                                            (subChild: any) => (
+                                              <Link
+                                                key={subChild.label}
+                                                href={subChild.href}
+                                                onClick={closeNav}
+                                                className="py-2 text-sm text-gray-500 hover:text-[#2F5D50] transition-colors"
+                                              >
+                                                {subChild.label}
+                                              </Link>
+                                            ),
+                                          )}
                                         </motion.div>
                                       )}
                                     </AnimatePresence>

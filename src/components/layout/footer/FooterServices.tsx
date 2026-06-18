@@ -13,7 +13,7 @@ const services = [
 export const FooterServices = () => {
   return (
     <div>
-      <h4 className="font-serif text-xl text-white mb-6">Our Services</h4>
+      <h4 className=" text-xl text-white mb-6">Our Services</h4>
 
       <ul className="space-y-3.5">
         {services.map((service) => (
