@@ -337,10 +337,6 @@
 
 
 
-
-
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -349,7 +345,6 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { navigation } from "./Navigation"; // Adjust path to your data file
-import { Button } from "../../common/Button"; // Adjust path if needed
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -414,10 +409,7 @@ export const MobileNav = () => {
             className="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col pt-24 overflow-hidden"
           >
             
-            {/* --- MATCHED LOGO ELEMENT --- 
-              Changed to 'fixed' and added 'h-11 flex items-center' to perfectly mirror 
-              the trigger button layout properties on the right side.
-            */}
+            {/* --- MATCHED LOGO ELEMENT --- */}
             <div className="fixed top-5 left-4 md:left-8 z-[102] h-11 flex items-center">
               <Link href="/" onClick={closeNav} className="flex items-center">
                 <Image
@@ -426,7 +418,7 @@ export const MobileNav = () => {
                   width={140} 
                   height={35}
                   priority
-                  className="object-contain  opacity-90" 
+                  className="object-contain opacity-90" 
                 />
               </Link>
             </div>
@@ -439,9 +431,9 @@ export const MobileNav = () => {
                     <div className="flex flex-col">
                       <button
                         onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                        className="flex justify-between items-center py-4 text-2xl font-serif text-[#1F3D35] w-full text-left group"
+                        className="flex justify-between items-center py-4 text-2xl text-[#1F3D35] w-full text-left group"
                       >
-                        <span className="transition-colors group-hover:text-[#C9A86A]">{item.label}</span>
+                        <span className="transition-colors">{item.label}</span>
                         <ChevronDown className={`w-5 h-5 transition-transform text-[#C9A86A] duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`} />
                       </button>
 
@@ -507,7 +499,7 @@ export const MobileNav = () => {
                     <Link
                       href={item.href as string}
                       onClick={closeNav}
-                      className="block py-4 text-2xl font-serif text-[#1F3D35] hover:text-[#C9A86A] transition-colors"
+                      className="block py-4 text-2xl text-[#1F3D35] transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -517,11 +509,14 @@ export const MobileNav = () => {
             </div>
 
             {/* Bottom Booking Panel */}
-            <div className="p-6 bg-[#FAFAFA] border-t border-gray-100 flex justify-center shadow-inner">
+            <div className="p-6 bg-[#FAFAFA] border-t border-gray-100 flex justify-center">
               <div className="max-w-md w-full">
-                <Button className="w-full justify-center bg-[#1F3D35] text-white hover:bg-[#C9A86A] py-4 rounded-xl shadow-md">
+                {/* UPDATED ELEMENT BELOW: Replaced custom component with HTML5 button 
+                  and stripped any active hover modifications to retain precise coloring.
+                */}
+                <button className="w-full flex items-center justify-center bg-[#0b2f25] text-white py-4 rounded-xl shadow-md font-medium text-base transition-none hover:bg-[#0b2f25] hover:text-white active:bg-[#0b2f25] focus:outline-none">
                   Book Consultation
-                </Button>
+                </button>
               </div>
             </div>
           </motion.div>
