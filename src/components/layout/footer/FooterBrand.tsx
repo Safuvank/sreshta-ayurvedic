@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image"; // Import Image from next/image
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+import Image from "next/image"; 
+import { FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export const FooterBrand = () => {
   return (
@@ -44,12 +44,12 @@ export const FooterBrand = () => {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="https://x.com"
           target="_blank"
           rel="noopener noreferrer"
           className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-gray-300 transition-all duration-300 hover:bg-[#C9A86A] hover:text-white"
         >
-          <FaTwitter size={18} />
+          <FaXTwitter size={18} />
         </a>
 
         <a

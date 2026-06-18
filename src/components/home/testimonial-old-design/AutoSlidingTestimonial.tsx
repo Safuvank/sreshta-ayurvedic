@@ -34,16 +34,23 @@ export const AutoSlidingTestimonials = () => {
 
       {/* Interactive Dot Indicators */}
       <div className="flex justify-center gap-2 mt-8">
-        {testimonials.slice(0, 5).map((_, idx) => ( // Showing max 5 dots for clean UI
-          <button
-            key={idx}
-            onClick={() => setActiveIndex(idx)}
-            className={`transition-all duration-300 rounded-full h-2 ${
-              activeIndex === idx ? "w-8 bg-[#C9A86A]" : "w-2 bg-gray-300 hover:bg-gray-400"
-            }`}
-            aria-label={`Go to testimonial ${idx + 1}`}
-          />
-        ))}
+        {testimonials.slice(0, 5).map(
+          (
+            _,
+            idx, // Showing max 5 dots for clean UI
+          ) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              className={`transition-all duration-300 rounded-full h-2 ${
+                activeIndex === idx
+                  ? "w-8 bg-[#C9A86A]"
+                  : "w-2 bg-gray-300 hover:bg-gray-400"
+              }`}
+              aria-label={`Go to testimonial ${idx + 1}`}
+            />
+          ),
+        )}
       </div>
     </div>
   );
