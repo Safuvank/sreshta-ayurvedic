@@ -14,7 +14,7 @@ export const WhatsAppButton = () => {
       initial={{ opacity: 0, scale: 0.5, y: 50 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 1 }} // Delays entry so it doesn't distract immediately on load
-      className="fixed bottom-20 right-20 z-50 flex flex-col items-end group"
+      className="fixed bottom-20 right-10 z-50 flex flex-col items-end group"
     >
       {/* Optional: Tooltip that appears on hover */}
       <div className="absolute -top-12 right-0 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-xl shadow-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap border border-gray-100">
