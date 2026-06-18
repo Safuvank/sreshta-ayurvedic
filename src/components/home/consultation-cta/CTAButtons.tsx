@@ -16,7 +16,7 @@ export const CTAButtons = () => {
       {/* Primary Button: Solid Gold */}
       <Link
         href="#"
-        className="group relative overflow-hidden flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl bg-[#C9A86A] px-8 py-4 font-medium text-[#1F3D35] transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,106,0.3)]"
+        className="group relative overflow-hidden flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl bg-[#bfddeb] px-8 py-4 font-medium text-[#1F3D35] transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,106,0.3)]"
       >
         <span className="absolute inset-0 translate-y-full bg-white transition-transform duration-300 ease-out group-hover:translate-y-0" />
         <span className="relative z-10 flex items-center gap-2">

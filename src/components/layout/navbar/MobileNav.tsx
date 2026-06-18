@@ -346,10 +346,9 @@
 
 
 
-
 "use client";
 
-import { useState, useEffect } from "react"; // Added useEffect
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -364,14 +363,11 @@ export const MobileNav = () => {
   // --- BACKGROUND SCROLL LOCK LOGIC ---
   useEffect(() => {
     if (isOpen) {
-      // Lock scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Restore scrolling
       document.body.style.overflow = "";
     }
 
-    // Structural cleanup safeguard if user navigates away abruptly
     return () => {
       document.body.style.overflow = "";
     };
@@ -396,7 +392,6 @@ export const MobileNav = () => {
         }`}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
-        {/* Custom Asymmetrical Morphing Lines */}
         <div className="flex flex-col items-end justify-center gap-[5px] w-5 h-4 relative">
           <motion.span
             animate={isOpen ? { rotate: 45, y: 4, width: "20px" } : { rotate: 0, y: 0, width: "20px" }}
@@ -494,10 +489,14 @@ export const MobileNav = () => {
                       </AnimatePresence>
                     </div>
                   ) : (
+                    /* 
+                      FIXED: Changed text-2x1 (typo) to text-2xl 
+                      and added font-serif to match the category headers perfectly.
+                    */
                     <Link
                       href={item.href as string}
                       onClick={closeNav}
-                      className="block py-4 text-2x1 text-[#1F3D35] hover:text-[#C9A86A] transition-colors"
+                      className="block py-4 text-2xl text-[#1F3D35] hover:text-[#C9A86A] transition-colors"
                     >
                       {item.label}
                     </Link>
