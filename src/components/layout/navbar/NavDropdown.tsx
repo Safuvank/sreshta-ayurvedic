@@ -307,7 +307,7 @@ export const NavDropdown = ({ item }: { item: any }) => {
       {/* Top Level Navbar Button */}
       <button
         className={`flex items-center gap-1.5 py-6 text-sm lg:text-base font-medium transition-colors hover:text-[#C9A86A] ${
-          isActive ? "text-[#C9A86A]" : "text-white"
+          isActive ? "text-[#C9A86A]" : "text-black"
         }`}
       >
         {item.label}

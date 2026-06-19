@@ -22,7 +22,7 @@ export const DesktopNav = () => {
             key={item.label}
             href={item.href}
             className={`relative py-2 text-sm lg:text-base font-medium transition-colors hover:text-[#C9A86A] ${
-              isActive ? "text-[#C9A86A]" : "text-white"
+              isActive ? "text-[#C9A86A]" : "text-black"
             }`}
           >
             {item.label}
