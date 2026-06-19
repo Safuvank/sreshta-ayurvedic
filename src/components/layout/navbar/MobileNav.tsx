@@ -374,7 +374,7 @@ export const MobileNav = () => {
         className={`fixed top-5 right-4 md:right-8 z-[101] flex items-center justify-center w-11 h-11 backdrop-blur-md border rounded-xl transition-all duration-500 ${
           isOpen
             ? "bg-[#1F3D35]/5 border-[#1F3D35]/10"
-            : "bg-white/80 border-[#1F3D35]/20 shadow-sm hover:bg-white"
+            : "bg-white/80 border-[#1F3D35]/20 border-1.5 hover:bg-white"
         }`}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
