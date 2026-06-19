@@ -419,8 +419,8 @@ export const MobileNav = () => {
                 <Image
                   src="/images/sreshta-logo-color.png"
                   alt="Sreshta Logo"
-                  width={140}
-                  height={35}
+                  width={160}
+                  height={40}
                   priority
                   className="object-contain opacity-90"
                 />
