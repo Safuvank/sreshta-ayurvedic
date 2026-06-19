@@ -321,6 +321,17 @@
 //   );
 // };
 
+
+
+
+
+
+
+
+
+
+
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -359,10 +370,11 @@ export const MobileNav = () => {
       {/* --- ICON-ONLY INTERACTIVE TRIGGER --- */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed top-5 right-4 md:right-8 z-[101] flex items-center justify-center w-11 h-11 backdrop-blur-md border rounded-xl shadow-sm transition-all duration-500 ${
+        /* FIXED: Changed closed state from bg-white/10 to bg-white/80 with a dark green border */
+        className={`fixed top-5 right-4 md:right-8 z-[101] flex items-center justify-center w-11 h-11 backdrop-blur-md border rounded-xl transition-all duration-500 ${
           isOpen
-            ? "bg-[#1F3D35]/5 border-[#1F3D35]/10 text-[#1F3D35]"
-            : "bg-white/10 border-white/20 text-white hover:bg-white/20"
+            ? "bg-[#1F3D35]/5 border-[#1F3D35]/10"
+            : "bg-white/80 border-[#1F3D35]/20 shadow-sm hover:bg-white"
         }`}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
@@ -375,7 +387,8 @@ export const MobileNav = () => {
                 : { rotate: 0, y: 0, width: "20px" }
             }
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className={`h-[2px] rounded-full transition-colors duration-500 ${isOpen ? "bg-[#1F3D35]" : "bg-white"}`}
+            /* FIXED: Replaced conditional bg-white with solid bg-[#1F3D35] so it's always visible */
+            className="h-[2px] rounded-full bg-[#1F3D35] transition-transform"
           />
           <motion.span
             animate={
@@ -384,7 +397,8 @@ export const MobileNav = () => {
                 : { rotate: 0, y: 0, width: "12px" }
             }
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className={`h-[2px] rounded-full transition-colors duration-500 ${isOpen ? "bg-[#1F3D35]" : "bg-white"}`}
+            /* FIXED: Replaced conditional bg-white with solid bg-[#1F3D35] */
+            className="h-[2px] rounded-full bg-[#1F3D35] transition-transform"
           />
         </div>
       </button>
@@ -520,9 +534,6 @@ export const MobileNav = () => {
             {/* Bottom Booking Panel */}
             <div className="p-6 bg-[#FAFAFA] border-t border-gray-100 flex justify-center">
               <div className="max-w-md w-full">
-                {/* UPDATED ELEMENT BELOW: Replaced custom component with HTML5 button 
-                  and stripped any active hover modifications to retain precise coloring.
-                */}
                 <button className="w-full flex items-center justify-center bg-[#0b2f25] text-white py-4 rounded-xl shadow-md font-medium text-base transition-none hover:bg-[#0b2f25] hover:text-white active:bg-[#0b2f25] focus:outline-none">
                   Book Consultation
                 </button>
