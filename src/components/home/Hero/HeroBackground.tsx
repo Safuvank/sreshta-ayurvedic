@@ -18,7 +18,7 @@ export const HeroBackground = () => {
       {/* MOBILE ONLY BACKGROUND IMAGE */}
       {/* Replace '/images/your-mobile-bg.jpg' with your actual image path */}
       {/* md:hidden ensures it disappears on tablets and desktops */}
-      <div className="absolute inset-0 bg-[url('/images/hero/mobile-new.png')] bg-cover bg-center md:hidden" />
+      <div className="absolute inset-0 bg-[url('/images/hero/mobile-only-hero.png')] bg-cover bg-center md:hidden" />
 
       {/* Premium Ultra-Soft Light Glows */}
       {/* (You might want to add md:block to these if you want to hide the glows on mobile) */}
