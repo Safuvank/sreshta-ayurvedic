@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import { Container } from "../Hero/Container";
+import { Container } from "../../common/Container";
 import { SectionHeading } from "../../common/SectionHeading";
 import { TreatmentPreviewGrid } from "./TreatmentPreviewGrid";
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
-import { Container } from "../home/Hero/Container";
+import { Container } from "../common/Container";
 
 const reasons = [
   "Highly Experienced Doctors & Vaidyas",

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Container } from "../home/Hero/Container";
+import { Container } from "../common/Container";
 
 const stats = [
   { value: "20+", label: "Years Experience" },

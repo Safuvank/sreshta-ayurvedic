@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Container } from "../home/Hero/Container";
+import { Container } from "../common/Container";
 
 export const BrandStory = () => {
   return (

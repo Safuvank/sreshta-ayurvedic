@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Container } from "../Hero/Container";
+import { Container } from "../../common/Container";
 import { CTAButtons } from "./CTAButtons";
 
 export const ConsultationCTA = () => {

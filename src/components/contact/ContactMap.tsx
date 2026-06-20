@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { contactInfo } from "@/src/data/contact";
-import { Container } from "../home/Hero/Container";
+import { Container } from "../common/Container";
 
 export const ContactMap = () => {
   return (

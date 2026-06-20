@@ -1,7 +1,7 @@
 "use client";
 
 import { PhoneCall, MessageCircle } from "lucide-react";
-import { Container } from "../home/Hero/Container";
+import { Container } from "../common/Container";
 import { contactInfo } from "@/src/data/contact";
 
 export const ContactCTA = () => {

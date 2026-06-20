@@ -1,4 +1,4 @@
-import { Container } from "../Hero/Container";
+import { Container } from "../../common/Container";
 import { SectionHeading } from "../../common/SectionHeading";
 import { ServicePreviewGrid } from "./ServicesPreviewGrid";
 

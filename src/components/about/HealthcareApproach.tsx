@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { Container } from "../home/Hero/Container";
+import { Container } from "../common/Container";
 
 const principles = [
   "Holistic Healing of Mind, Body & Spirit",

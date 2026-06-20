@@ -1,4 +1,4 @@
-import { Container } from "../../home/Hero/Container";
+import { Container } from "../../common/Container";
 import { FooterBrand } from "./FooterBrand";
 import { FooterLinks } from "./FooterLink";
 import { FooterServices } from "./FooterServices";

@@ -1,4 +1,4 @@
-import { Container } from "@/src/components/home/Hero/Container";
+import { Container } from "@/src/components/common/Container";
 import { ContactHero } from "@/src/components/contact/ContactHero";
 import { QuickContact } from "@/src/components/contact/QuickContact";
 import { ContactInfo } from "@/src/components/contact/ContactInfo";

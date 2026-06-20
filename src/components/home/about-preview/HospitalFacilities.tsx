@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Container } from "../Hero/Container"; 
+import { Container } from "../../common/Container"; 
 import { SectionHeading } from "../../common/SectionHeading"; // Adjust path to match your folder structure
 import { TrustIndicators } from "./TrustIndicators";
 
