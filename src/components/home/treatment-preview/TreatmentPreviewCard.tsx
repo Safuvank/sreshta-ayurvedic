@@ -37,7 +37,7 @@ export const TreatmentPreviewCard = ({
       </div>
 
       {/* Content Layer (Slides up on hover) */}
-      <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+      <div className="absolute inset-0 flex flex-col justify-end pb-11 lg:pb-11 pl-6 md:p-8">
         <div className="translate-y-8 transition-transform duration-500 ease-out group-hover:translate-y-0">
           
           {/* Subtle Accent Line */}

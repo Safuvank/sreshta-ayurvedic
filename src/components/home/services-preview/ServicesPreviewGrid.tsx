@@ -26,7 +26,7 @@ export const ServicePreviewGrid = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
-      className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      className="grid gap-6 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
     >
       {services.map((service) => (
         // Added h-full here to align the cards properly

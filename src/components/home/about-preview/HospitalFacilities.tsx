@@ -21,7 +21,7 @@ export const HospitalFacilities = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-[#FAFAFA] relative">
+    <section className="py-10 lg:py-32 bg-[#FAFAFA] relative">
       <Container>
         
         {/* Integrated Section Heading */}

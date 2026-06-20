@@ -10,7 +10,7 @@ import { TreatmentPreviewGrid } from "./TreatmentPreviewGrid";
 
 export const TreatmentsPreview = () => {
   return (
-    <section className="py-20 lg:py-32 bg-[#F8F5EF] relative overflow-hidden">
+    <section className="py-10 lg:py-20 bg-[#F8F5EF] relative overflow-hidden">
       {/* Optional decorative blur to blend with the cream background */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#C9A86A]/5 rounded-full blur-[100px] -translate-x-1/2 pointer-events-none" />
 

@@ -10,7 +10,7 @@ import { VideoTestimonialHighlight } from "./VideoTestimonialHighlight";
 
 export const TestimonialsPreview = () => {
   return (
-    <section className="bg-[#FAFAFA] py-15 lg:py-25 relative overflow-hidden">
+    <section className="bg-[#FAFAFA] py-7 lg:py-25 relative overflow-hidden">
       <Container>
         {/* Section Header */}
         <SectionHeading
@@ -52,7 +52,7 @@ export const TestimonialsPreview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 lg:mt-20 flex justify-center"
+          className="mt-8 lg:mt-15 flex justify-center"
         >
           <Link
             href="/patient-stories"
