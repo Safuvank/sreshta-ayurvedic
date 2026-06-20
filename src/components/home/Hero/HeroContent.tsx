@@ -36,12 +36,15 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
 
       <motion.p
         variants={itemVariants}
-        className="mt-6 text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl text-left mx-auto lg:mx-0"
+        // FIXED: Removed mx-auto to ensure it stays left-aligned on mobile
+        className="mt-6 text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl text-left mx-0"
       >
         Sreshta Multi specialty Ayurveda clinic is a premium Ayurveda centre
         where the traditional system of Ayurveda is in confluence with modern
-        medical techniques, without compromising the authenticity of the
-        science.
+        medical techniques, without{" "}
+        {/* ADDED: This break will only show on mobile screens and hide on tablets/desktops */}
+        <br className="block md:hidden" />
+        compromising the authenticity of <br className="block md:hidden" /> the science.
       </motion.p>
     </>
   );
