@@ -44,7 +44,7 @@ export const navigation = [
   {
     label: "Company",
     children: [
-      { label: "About", href: "#" },
+      { label: "About", href: "/about" },
       { label: "Gallery", href: "/gallery" },
     ],
   },
