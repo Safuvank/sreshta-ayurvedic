@@ -11,10 +11,10 @@ export const HeroActions = ({ itemVariants }: HeroActionsProps) => {
   return (
     <motion.div
       variants={itemVariants}
-      className="mt-10 flex flex-col sm:flex-row gap-4 w-full justify-start"
+      className="mt-10 flex flex-col sm:flex-row gap-4 w-full justify-center"
     >
       {/* Secondary: Dark Green Border Outline Button (Slides to solid fill) */}
-      <button className="invisible lg:visible group relative overflow-hidden w-full sm:w-auto rounded-xl border border-[#1F3D35]/20 bg-transparent px-8 py-4 text-[#1F3D35] font-medium transition-colors duration-300 hover:text-white cursor-pointer">
+      <button className="invisible md:visible lg:visible group relative overflow-hidden w-full sm:w-auto rounded-xl border border-[#1F3D35]/20 bg-transparent px-8 py-4 text-[#1F3D35] font-medium transition-colors duration-300 hover:text-white cursor-pointer">
         <span className="absolute inset-0 translate-y-full bg-[#1F3D35] transition-transform duration-300 ease-out group-hover:translate-y-0" />
         <span className="relative z-10 flex items-center justify-center gap-2">
           Explore Treatments

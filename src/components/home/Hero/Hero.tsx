@@ -54,9 +54,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 
 import { motion, Variants } from "framer-motion";
@@ -95,15 +92,15 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {/* Left Column Area: Content & Typography actions */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left z-10 order-1">
+          {/* Notice the added md:items-center and lg:items-start */}
+          <div className="lg:col-span-6 flex flex-col items-start md:items-center lg:items-start text-left z-10 order-1">
             <HeroContent itemVariants={itemVariants} />
             <HeroActions itemVariants={itemVariants} />
           </div>
 
           {/* Right Column Area: High-end interactive image carousel track */}
           {/* FIXED: Changed to "invisible lg:visible" to hide the slider but keep its empty space on mobile */}
-          <div className="invisible lg:visible lg:col-span-6 w-full z-10 order-2">
+          <div className="invisible lg:visible md:visible lg:col-span-6 w-full z-10 order-2">
             <HeroImageSlider itemVariants={itemVariants} />
           </div>
         </motion.div>
