@@ -80,7 +80,7 @@ export const HeroBackground = () => {
     <div className="absolute inset-0 -z-10 bg-[#F6F5F0] overflow-hidden">
       
       {/* FIXED: Changed h-full to h-[40vh] for mobile, and added lg:h-full for desktop */}
-      <div className="absolute top-0 right-0 w-full h-[40vh] sm:h-[50vh] lg:h-full lg:w-3/4">
+      <div className="absolute top-0 right-0 w-full h-[40vh] sm:h-[50vh] lg:h-full lg:w-4/4">
         <motion.div 
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
