@@ -23,7 +23,7 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
       <motion.h1
         variants={itemVariants}
         // FIXED: Reduced text sizes across all breakpoints (2xl -> 4xl -> 5xl -> 6xl)
-        className="mt-2 mb-9 font-serif text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.3] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left"
+        className="mt-2 mb-9 font-serif text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.2] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left"
       >
         Sreshta <br className="block md:hidden" />
         Ayurvedic <br className="block md:hidden" />

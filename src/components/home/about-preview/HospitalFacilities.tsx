@@ -25,14 +25,14 @@ export const HospitalFacilities = () => {
       <Container>
         
         {/* Integrated Section Heading */}
-        <div className="mb-16">
+        {/* <div className="invisible mb-8">
           <SectionHeading
             // eyebrow="Why Choose Us"
             title="Why People Choose Sreshta"
             // description="Experience world-class holistic wellness powered by authentic traditions and modern medical standards."
             align="center"
           />
-        </div>
+        </div> */}
 
         <motion.div
           variants={containerVariants}
