@@ -77,7 +77,7 @@ import { motion } from "framer-motion";
 
 export const HeroBackground = () => {
   return (
-    <div className="absolute inset-0 -z-10 bg-[#F6F5F0] overflow-hidden">
+    <div className="absolute inset-0 -z-10 overflow-hidden">
       
       {/* FIXED: Changed h-full to h-[40vh] for mobile, and added lg:h-full for desktop */}
       <div className="absolute top-0 right-0 w-full h-[40vh] sm:h-[50vh] lg:h-full lg:w-4/4">

@@ -234,7 +234,7 @@ export default function Hero() {
 
   return (
     // FIXED: Removed 100dvh. Used pt-10 pb-16 so it naturally fits the content and lets the next section show below it!
-    <section className="relative w-full overflow-hidden pt-10 pb-16 lg:pt-0 lg:pb-0 lg:flex lg:items-center lg:min-h-[calc(100vh-90px)]">
+    <section className="relative w-full overflow-hidden pt-10 lg:pt-0 lg:pb-0 lg:flex lg:items-center lg:min-h-[calc(100vh-90px)]">
       <HeroBackground />
 
       <Container>

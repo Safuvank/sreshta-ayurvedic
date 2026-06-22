@@ -118,18 +118,18 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
         <br className="block md:hidden" /> Care
       </motion.h1> */}
 
-
-<motion.h1
-  variants={itemVariants}
-  // FIXED: Changed leading to be looser on mobile (leading-[1.4]) and tight on desktop (md:leading-[1.12])
-  className="mt-2 font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.3] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left"
->
-  Sreshta<br className="block md:hidden" />
-  Ayurvedic <br className="block md:hidden" /> 
-  Way of <br className="block md:hidden" /> 
-  Advanced <br className="block md:hidden" /> 
-  Care
-</motion.h1>
+      <motion.h1
+        variants={itemVariants}
+        // FIXED: Changed leading to be looser on mobile (leading-[1.4]) and tight on desktop (md:leading-[1.12])
+        className="mt-2 font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.3] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left"
+      >
+        Sreshta{" "}
+        <br className="block md:hidden" />
+        Ayurvedic <br className="block md:hidden" />
+        Way of <br className="block md:hidden" />
+        Advanced <br className="block md:hidden" />
+        Care
+      </motion.h1>
 
       <motion.p
         variants={itemVariants}
