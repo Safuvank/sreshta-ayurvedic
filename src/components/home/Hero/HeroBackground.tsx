@@ -71,7 +71,6 @@
 // };
 
 
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -80,21 +79,21 @@ export const HeroBackground = () => {
   return (
     <div className="absolute inset-0 -z-10 bg-[#F6F5F0] overflow-hidden">
       
-      {/* IMAGE WRAPPER: Keeps the image anchored to the top-right */}
-      <div className="absolute top-0 right-0 w-full h-full lg:w-3/4">
+      {/* FIXED: Changed h-full to h-[40vh] for mobile, and added lg:h-full for desktop */}
+      <div className="absolute top-0 right-0 w-full h-[40vh] sm:h-[50vh] lg:h-full lg:w-3/4">
         <motion.div 
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          // bg-[position:80%_center] keeps the hospital building in frame on mobile
-          className="absolute inset-0 bg-[url('/images/hero/heroimg.png')] bg-cover bg-[position:80%_center] lg:bg-center" 
+          // Note: Changed back to bg-cover here since we are now strictly limiting the container height
+          className="absolute inset-0 bg-[url('/images/hero/heroimg.png')] bg-no-repeat bg-[position:80%_center] lg:bg-center bg-cover" 
         />
 
         {/* MASK 1: Fades the image out at the bottom so it blends into the cream background */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#F6F5F0] via-[#F6F5F0]/40 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-[#F6F5F0] via-[#F6F5F0]/40 to-transparent" /> */}
         
         {/* MASK 2: Fades the image out on the left side so the text is clear */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F6F5F0] via-[#F6F5F0]/80 to-transparent lg:via-[#F6F5F0]/40" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#F6F5F0] via-[#F6F5F0]/80 to-transparent lg:via-[#F6F5F0]/40" /> */}
       </div>
 
     </div>
