@@ -134,7 +134,7 @@ export const ServiceDetailHero = ({ service }: { service: ServiceProps }) => {
   return (
     <>
       {/* 1. Full-Width Hero Image Banner */}
-      <section className="relative pt-40 pb-24 lg:pb-32 min-h-[50vh] flex items-end overflow-hidden">
+      <section className="relative pt-20 pb-20 lg:pb-20 min-h-[50vh] flex items-end overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -187,7 +187,7 @@ export const ServiceDetailHero = ({ service }: { service: ServiceProps }) => {
       </section>
 
       {/* 2. Detailed Content Section Below the Hero */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-12 lg:py-12 bg-white">
         <Container>
           <div className="grid lg:grid-cols-[1fr_400px] gap-16 items-start">
             
