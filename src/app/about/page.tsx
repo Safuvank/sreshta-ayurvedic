@@ -1,11 +1,11 @@
-import { AboutHero } from "@/src/components/about/AboutHero";
-import { OrganizationOverview } from "@/src/components/about/OrganizationOverview";
-import { BrandStory } from "@/src/components/about/BrandStory";
-import { MissionVisionValues } from "@/src/components/about/MissionVisionValues";
-import { HealthcareApproach } from "@/src/components/about/HealthcareApproach";
-import { FacilitiesShowcase } from "@/src/components/about/FacilitiesShowcase";
-import { WhyChooseUs } from "@/src/components/about/WhyChooseUs";
-import { AboutCTA } from "@/src/components/about/AboutCTA";
+import { AboutHero } from "@/src/components/pages/about/AboutHero";
+import { OrganizationOverview } from "@/src/components/pages/about/OrganizationOverview";
+import { BrandStory } from "@/src/components/pages/about/BrandStory";
+import { MissionVisionValues } from "@/src/components/pages/about/MissionVisionValues";
+import { HealthcareApproach } from "@/src/components/pages/about/HealthcareApproach";
+import { FacilitiesShowcase } from "@/src/components/pages/about/FacilitiesShowcase";
+import { WhyChooseUs } from "@/src/components/pages/about/WhyChooseUs";
+import { AboutCTA } from "@/src/components/pages/about/AboutCTA";
 
 export const metadata = {
   title: "About Us | Sreshta Ayurvedic Hospital",

@@ -23,7 +23,7 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
       <motion.h1
         variants={itemVariants}
         // FIXED: Reduced text sizes across all breakpoints (2xl -> 4xl -> 5xl -> 6xl)
-        className="mt-2 mb-9 font-serif text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.2] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left"
+        className="mt-2 mb-9 font-serif  text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.2] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left"
       >
         Sreshta <br className="block md:hidden" />
         Ayurvedic <br className="block md:hidden" />
@@ -35,7 +35,7 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
       <motion.p
         variants={itemVariants}
         // FIXED: Added "hidden md:block" to hide this paragraph on mobile phones
-        className="hidden md:block mt-6 text-base sm:text-lg leading-relaxed text-[#1F3D35]/80 max-w-xl text-left mx-0"
+        className="hidden md:block text-base sm:text-lg leading-relaxed text-[#1F3D35]/80 max-w-xl text-left mx-0"
       >
         Sreshta Multi specialty Ayurveda clinic is a premium Ayurveda centre
         where the traditional system of Ayurveda is in confluence with modern

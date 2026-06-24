@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Leaf, UserRound, FlaskConical, Users } from "lucide-react";
 
 const trustMetrics = [
-  { id: 1, icon: Leaf, value: "20+", label: "YEARS OF\nEXCELLENCE" },
-  { id: 2, icon: UserRound, value: "50+", label: "EXPERT\nDOCTORS" },
+  { id: 1, icon: Leaf, value: "5+", label: "YEARS OF\nEXCELLENCE" },
+  { id: 2, icon: UserRound, value: "10+", label: "EXPERT\nDOCTORS" },
   { id: 3, icon: FlaskConical, value: "25+", label: "SPECIALITY\nTREATMENTS" },
-  { id: 4, icon: Users, value: "10K+", label: "PATIENTS\nHEALED" },
+  { id: 4, icon: Users, value: "250+", label: "PATIENTS\nHEALED" },
 ];
 
 interface TrustIndicatorsProps {
@@ -43,7 +43,7 @@ export const TrustIndicators = ({ itemVariants }: TrustIndicatorsProps) => {
               </div>
 
               {/* Metric Value: Scaled down on mobile */}
-              <h3 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-serif text-[#C9A86A] mb-1 lg:mb-2 leading-none">
+              <h3 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl text-[#C9A86A] mb-1 lg:mb-2 leading-none">
                 {metric.value}
               </h3>
 

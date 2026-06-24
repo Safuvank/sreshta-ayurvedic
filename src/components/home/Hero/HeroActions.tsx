@@ -13,7 +13,7 @@ export const HeroActions = ({ itemVariants }: HeroActionsProps) => {
       variants={itemVariants}
       // FIXED: Replaced "invisible md:visible flex" with "hidden md:flex".
       // This completely removes the empty space on mobile screens!
-      className="hidden md:flex w-full flex-col sm:flex-row justify-start"
+      className="hidden md:flex w-full flex-col sm:flex-row justify-start md:pt-5"
     >
       <button className="group relative overflow-hidden w-full sm:w-auto rounded-xl border border-[#1F3D35]/20 bg-transparent px-8 py-4 text-[#1F3D35] font-medium transition-colors duration-300 hover:text-white cursor-pointer backdrop-blur-sm bg-white/20">
         <span className="absolute inset-0 translate-y-full bg-[#1F3D35] transition-transform duration-300 ease-out group-hover:translate-y-0" />

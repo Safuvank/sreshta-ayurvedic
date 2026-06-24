@@ -1,10 +1,8 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Container } from "../../common/Container"; 
-import { SectionHeading } from "../../common/SectionHeading"; // Adjust path to match your folder structure
+import { Container } from "../../common/Container";
 import { TrustIndicators } from "./TrustIndicators";
-
 
 export const HospitalFacilities = () => {
   const containerVariants = {
@@ -23,7 +21,6 @@ export const HospitalFacilities = () => {
   return (
     <section className="py-10 lg:py-32 bg-[#FAFAFA] relative">
       <Container>
-        
         {/* Integrated Section Heading */}
         {/* <div className="invisible mb-8">
           <SectionHeading
@@ -50,7 +47,6 @@ export const HospitalFacilities = () => {
             itemVariants={itemVariants} 
           /> */}
         </motion.div>
-
       </Container>
     </section>
   );

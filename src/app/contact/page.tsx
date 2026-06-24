@@ -1,11 +1,11 @@
 import { Container } from "@/src/components/common/Container";
-import { ContactHero } from "@/src/components/contact/ContactHero";
-import { QuickContact } from "@/src/components/contact/QuickContact";
-import { ContactInfo } from "@/src/components/contact/ContactInfo";
-import { ContactForm } from "@/src/components/contact/ContactForm";
-import { ContactMap } from "@/src/components/contact/ContactMap";
+import { ContactHero } from "@/src/components/pages/contact/ContactHero";
+import { QuickContact } from "@/src/components/pages/contact/QuickContact";
+import { ContactInfo } from "@/src/components/pages/contact/ContactInfo";
+import { ContactForm } from "@/src/components/pages/contact/ContactForm";
+import { ContactMap } from "@/src/components/pages/contact/ContactMap";
 // import { WorkingHours } from "@/src/components/contact/WorkingHours";
-import { ContactCTA } from "@/src/components/contact/ContactCTA";
+import { ContactCTA } from "@/src/components/pages/contact/ContactCTA";
 
 export const metadata = {
   title: "Contact Us | Sreshta Ayurvedic Hospital",

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Target, Eye, Heart } from "lucide-react";
-import { Container } from "../common/Container";
+import { Container } from "../../common/Container";
 
 const items = [
   {

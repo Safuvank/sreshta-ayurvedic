@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Container } from "../common/Container";
+import { Container } from "../../common/Container";
 
 const facilities = [
   { title: "Consultation Rooms", image: "/images/facilities/consultation-room.jpg" },
