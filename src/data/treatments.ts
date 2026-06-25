@@ -27,4 +27,11 @@ export const treatments = [
     image: "/images/treatments/njavarakizhi-therapy.png",
     slug: "njavarakizhi",
   },
+  {
+    id: 5,
+    title: "Njavarakizhi",
+    description: "Traditional rejuvenation therapy using medicated rice bundles.",
+    image: "/images/treatments/njavarakizhi-therapy.png",
+    slug: "njavarakizhi",
+  },
 ];
