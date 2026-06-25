@@ -289,7 +289,7 @@ export const ServiceDetailHero = ({ service }: { service: ServiceProps }) => {
       {service.treatments && service.treatments.length > 0 && (
         <section className="py-16 lg:py-24 bg-[#F8F5EF]">
           <Container>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -298,7 +298,7 @@ export const ServiceDetailHero = ({ service }: { service: ServiceProps }) => {
               <h2 className="font-serif text-4xl lg:text-5xl text-[#2F5D50] mb-6">
                 Included Therapies
               </h2>
-            </motion.div>
+            </motion.div> */}
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {service.treatments.map((treatment, index) => (
