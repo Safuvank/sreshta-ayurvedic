@@ -1,60 +1,3 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { Target, Eye, Heart } from "lucide-react";
-// import { Container } from "../../common/Container";
-
-// const items = [
-//   {
-//     title: "Our Mission",
-//     icon: Target,
-//     description: "To provide authentic Ayurvedic healthcare through personalized treatments, rigorous clinical standards, and holistic wellness solutions.",
-//   },
-//   {
-//     title: "Our Vision",
-//     icon: Eye,
-//     description: "To become the world's most trusted and accessible destination for pure Ayurvedic healing and lifelong preventive healthcare.",
-//   },
-//   {
-//     title: "Our Values",
-//     icon: Heart,
-//     description: "Compassion, Authenticity, Medical Excellence, and a relentless commitment to Patient-Centered Care in everything we do.",
-//   },
-// ];
-
-// export const MissionVisionValues = () => {
-//   return (
-//     <section className="py-20 lg:py-32 bg-white">
-//       <Container>
-//         <div className="grid md:grid-cols-3 gap-8">
-//           {items.map((item, idx) => (
-//             <motion.div
-//               key={idx}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true, margin: "-100px" }}
-//               transition={{ duration: 0.6, delay: idx * 0.2 }}
-//               className="group bg-[#F8F5EF]/50 p-10 rounded-[2rem] border border-[#F8F5EF] transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-2 text-center"
-//             >
-//               <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-[#2F5D50] mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-//                 <item.icon className="w-8 h-8" />
-//               </div>
-//               <h3 className="font-serif text-2xl text-gray-900 mb-4">{item.title}</h3>
-//               <p className="text-gray-600 leading-relaxed">{item.description}</p>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </Container>
-//     </section>
-//   );
-// };
-
-
-
-
-
-
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -65,39 +8,49 @@ const items = [
   {
     title: "Our Mission",
     icon: Target,
-    description: "To provide authentic Ayurvedic healthcare through personalized treatments, rigorous clinical standards, and holistic wellness solutions.",
+    description:
+      "To provide authentic Ayurvedic healthcare through personalized treatments, rigorous clinical standards, and holistic wellness solutions.",
   },
   {
     title: "Our Vision",
     icon: Eye,
-    description: "To become the world's most trusted and accessible destination for pure Ayurvedic healing and lifelong preventive healthcare.",
+    description:
+      "To become the world's most trusted and accessible destination for pure Ayurvedic healing and lifelong preventive healthcare.",
   },
   {
     title: "Our Values",
     icon: Heart,
-    description: "Compassion, Authenticity, Medical Excellence, and a relentless commitment to Patient-Centered Care in everything we do.",
+    description:
+      "Compassion, Authenticity, Medical Excellence, and a relentless commitment to Patient-Centered Care in everything we do.",
   },
 ];
 
 export const MissionVisionValues = () => {
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-24 lg:py-32 bg-[#1F3D35]">
       <Container>
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {items.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group bg-[#F8F5EF]/50 p-10 rounded-[2rem] border border-gray-100 transition-all duration-300 hover:bg-white hover:shadow-[0_20px_40px_-15px_rgba(47,93,80,0.08)] hover:-translate-y-2 text-center"
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: idx * 0.15 }}
+              className="group bg-white/5 p-10 rounded-2xl border border-white/10 transition-all duration-500 hover:bg-white/10"
             >
-              <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-[#C9A86A] mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <item.icon className="w-8 h-8" />
+              {/* Icon Container */}
+              <div className="w-14 h-14 mb-8 flex items-center justify-center text-[#C9A86A] bg-white/10 rounded-xl transition-all duration-500">
+                <item.icon className="w-7 h-7" />
               </div>
-              <h3 className="font-serif text-2xl text-[#2F5D50] mb-4">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed font-light">{item.description}</p>
+
+              {/* Text content in White */}
+              <h3 className="font-serif text-2xl text-white mb-4 tracking-tight">
+                {item.title}
+              </h3>
+              <p className="text-gray-200 font-light leading-relaxed transition-colors duration-300">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>

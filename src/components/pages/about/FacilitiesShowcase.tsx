@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Container } from "../../common/Container";
 
 const facilities = [
-  { title: "Consultation Rooms", image: "/images/facilities/consultation-room.jpg" },
-  { title: "Therapy Rooms", image: "/images/facilities/therapy-room.jpg" },
-  { title: "Patient Care Facilities", image: "/images/facilities/inpatient-care.jpg" },
-  { title: "Ayurvedic Pharmacy", image: "/images/facilities/pharmacy.jpg" },
+  { title: "Consultation Rooms", image: "/images/about/consultation.room.png" },
+  { title: "Therapy Rooms", image: "/images/about/panchakarma-room.png" },
+  { title: "Patient Care Facilities", image: "/images/about/ward.png" },
+  { title: "Ayurvedic Pharmacy", image: "/images/about/pharmacy.png" },
 ];
 
 export const FacilitiesShowcase = () => {
@@ -28,7 +28,7 @@ export const FacilitiesShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative h-[300px] rounded-[2rem] overflow-hidden cursor-pointer"
+              className="group relative h-[300px] rounded-2xl overflow-hidden cursor-pointer"
             >
               <Image 
                 src={facility.image} 
