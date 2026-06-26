@@ -37,14 +37,14 @@ export const navigation = [
   {
     label: "Support",
     children: [
-      { label: "Contact", href: "#" },
+      { label: "Contact", href: "/contact" },
       { label: "Our Doctors", href: "/doctors" },
     ],
   },
   {
     label: "Company",
     children: [
-      { label: "About", href: "/abouts" },
+      { label: "About", href: "/about" },
       { label: "Gallery", href: "/gallery" },
     ],
   },

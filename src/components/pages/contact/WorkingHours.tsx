@@ -1,48 +1,50 @@
-// import { Clock } from "lucide-react";
-// import { workingHours } from "@/src/data/contact";
-// import { Container } from "lucide-react";
+"use client";
 
-// export const WorkingHours = () => {
-//   return (
-//     <section className="py-20 bg-[#84672d]">
-//       <Container>
-//         <div className="max-w-4xl mx-auto bg-white rounded-[3rem] p-8 md:p-16 shadow-xl shadow-gray-100/50">
-//           <div className="text-center mb-12">
-//             <div className="w-16 h-16 bg-[#F8F5EF] rounded-full flex items-center justify-center text-[#C9A86A] mx-auto mb-6">
-//               <Clock className="w-8 h-8" />
-//             </div>
-//             <h2 className="font-serif text-3xl md:text-4xl text-gray-900">
-//               Working Hours
-//             </h2>
-//             <p className="mt-4 text-gray-600">
-//               Plan your visit according to our schedule.
-//             </p>
-//           </div>
+import { Clock } from "lucide-react";
+import { workingHours } from "@/src/data/contact";
 
-//           <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-//             {workingHours.map((schedule, index) => (
-//               <div
-//                 key={index}
-//                 className={`flex justify-between items-center pb-4 ${
-//                   index !== workingHours.length - 1 &&
-//                   index !== workingHours.length - 2
-//                     ? "border-b border-gray-100"
-//                     : "border-b md:border-0 border-gray-100"
-//                 }`}
-//               >
-//                 <span className="font-medium text-gray-800">
-//                   {schedule.day}
-//                 </span>
-//                 <span
-//                   className={`text-sm font-medium ${schedule.time.includes("Closed") ? "text-red-500" : "text-[#2F5D50]"}`}
-//                 >
-//                   {schedule.time}
-//                 </span>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </Container>
-//     </section>
-//   );
-// };
+export const WorkingHours = () => {
+  return (
+    <div className="bg-[#1F3D35] rounded-2xl lg:rounded-2xl shadow-[0_20px_60px_-15px_rgba(47,93,80,0.2)] p-8 md:p-12 lg:p-14 relative overflow-hidden flex flex-col justify-center h-full w-full">
+      {/* Decorative Blur */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A86A] opacity-10 rounded-full blur-[80px] pointer-events-none" />
+
+      <div className="relative z-10">
+        <div className="flex items-center gap-4 mb-8 lg:mb-10">
+          <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-[#C9A86A] shrink-0">
+            <Clock className="w-6 h-6" />
+          </div>
+          <h2 className="font-serif text-3xl md:text-4xl text-white">
+            Working Hours
+          </h2>
+        </div>
+
+        <div className="space-y-4">
+          {workingHours.map((schedule, index) => (
+            <div
+              key={index}
+              className={`flex justify-between items-center pb-4 ${
+                index !== workingHours.length - 1
+                  ? "border-b border-white/10"
+                  : ""
+              }`}
+            >
+              <span className="font-light text-gray-300 text-sm sm:text-base">
+                {schedule.day}
+              </span>
+              <span
+                className={`text-sm font-medium tracking-wide ${
+                  schedule.time.includes("Closed")
+                    ? "text-red-400"
+                    : "text-[#C9A86A]"
+                }`}
+              >
+                {schedule.time}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
