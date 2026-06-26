@@ -68,7 +68,7 @@ export const BrandStory = () => {
 
           {/* Sequential Paragraph Container */}
           <motion.div
-            className="space-y-6 text-gray-900 font-medium leading-relaxed text-lg"
+            className="space-y-6 text-gray-500 font-font-normal leading-relaxed"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

@@ -17,7 +17,7 @@ export const FacilitiesShowcase = () => {
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-serif text-4xl text-gray-900 mb-4">World-Class Facilities</h2>
-          <p className="text-gray-600 text-lg">Experience deep healing in a hygienic, serene, and traditionally architected environment.</p>
+          {/* <p className="text-gray-600 text-lg">Experience deep healing in a hygienic, serene, and traditionally architected environment.</p> */}
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">

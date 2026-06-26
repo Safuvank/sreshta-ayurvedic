@@ -27,7 +27,7 @@ export const OrganizationOverview = () => {
 
           {/* Right: Content & Structured Data */}
           <div className="lg:col-span-7">
-            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-6">
+            <h2 className="font-serif text-3xl md:text-6xl text-gray-900 mb-6">
               A Legacy of Authentic Care
             </h2>
 
