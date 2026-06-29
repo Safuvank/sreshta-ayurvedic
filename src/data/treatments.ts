@@ -133,7 +133,7 @@ export const treatments = [
       "Highly beneficial in Vata disorders",
     ],
     category: "Massage Therapy",
-    image: "/images/treatments/padaabhyangam.png",
+    image: "/images/treatments/Padaabhyangam.png",
     slug: "padaabhyangam",
   },
   {
@@ -154,7 +154,7 @@ export const treatments = [
       "Strengthens sense organs",
     ],
     category: "Head Therapy",
-    image: "/images/treatments/shiroabhyangam.png",
+    image: "/images/treatments/Shiroabhyangam.png",
     slug: "shiroabhyangam",
   },
   {
@@ -223,7 +223,7 @@ export const treatments = [
     longDescription:
       "The treatment is primarily used to relieve pain, stiffness, swelling and inflammation associated with musculoskeletal and neurological conditions.",
     category: "Kizhi Therapy",
-    image: "/images/treatments/podikKizhi.png",
+    image: "/images/treatments/podikkizhi.png",
     slug: "podikizhi",
   },
   {
@@ -234,7 +234,7 @@ export const treatments = [
     longDescription:
       "The warm pouches are massaged over the body to induce therapeutic sweating and provide relief.",
     category: "Kizhi Therapy",
-    image: "/images/treatments/narangakizhi.png",
+    image: "/images/treatments/Narangakizhi.png",
     slug: "narangakizhi",
   },
   {
@@ -440,7 +440,7 @@ export const treatments = [
       "Enhances clarity of vision and relaxation",
     ],
     category: "Eye Therapy",
-    image: "/images/treatments/nethrasekam.png",
+    image: "/images/treatments/Nethrasekam.png",
     slug: "nethrasekam",
   },
   {
