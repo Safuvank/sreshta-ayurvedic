@@ -15,7 +15,7 @@ export const ConsultationCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative overflow-hidden rounded-xl lg:rounded-xl bg-[#1F3D35] px-6 py-20 md:py-24 lg:py-32 shadow-2xl border border-white/10"
+          className="relative overflow-hidden rounded-2xl lg:rounded-xl bg-[#1F3D35] px-6 py-20 md:py-24 lg:py-32 shadow-2xl border border-white/10"
         >
           {/* Abstract Ambient Glows */}
           <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#2F5D50] rounded-full blur-[100px] opacity-80 pointer-events-none" />

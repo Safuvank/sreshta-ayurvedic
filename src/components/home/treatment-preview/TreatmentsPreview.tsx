@@ -41,7 +41,7 @@ export const TreatmentsPreview = () => {
                 relative 
                 overflow-hidden 
                 inline-flex 
-                rounded-xl 
+                rounded-2xl 
                 border 
                 border-[#2F5D50] 
                 bg-transparent 

@@ -105,7 +105,7 @@ import { ServicePreviewGrid } from "./ServicesPreviewGrid";
 export const ServicesPreview = () => {
   return (
     <section className="relative py-10 lg:py-20 bg-white overflow-hidden">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#F8F5EF] rounded-xl blur-[120px] -z-10 translate-x-1/3 -translate-y-1/3" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#F8F5EF] rounded-2xl blur-[120px] -z-10 translate-x-1/3 -translate-y-1/3" />
 
       <Container>
         <SectionHeading
@@ -133,7 +133,7 @@ export const ServicesPreview = () => {
               relative 
               overflow-hidden 
               inline-flex 
-              rounded-xl 
+              rounded-2xl 
               border 
               border-[#2F5D50] 
               bg-transparent 

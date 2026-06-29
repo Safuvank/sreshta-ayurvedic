@@ -16,9 +16,9 @@ export const ServicePreviewCard = ({
   slug,
 }: ServicePreviewCardProps) => {
   return (
-    <article className="group relative flex h-full flex-col bg-white rounded-[2.5rem] p-2 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(47,93,80,0.08)] border border-gray-100 hover:border-[#2F5D50]/20">
+    <article className="group relative flex h-full flex-col bg-white rounded-2xl p-2 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(47,93,80,0.08)] border border-gray-100 hover:border-[#2F5D50]/20">
       {/* Inset Framed Image Container */}
-      <div className="relative h-[240px] md:h-[260px] w-full overflow-hidden rounded-[2rem] bg-[#F8F5EF]">
+      <div className="relative h-[240px] md:h-[260px] w-full overflow-hidden rounded-2xl bg-[#F8F5EF]">
         <Image
           src={image}
           alt={title}
@@ -47,7 +47,7 @@ export const ServicePreviewCard = ({
 
           <Link
             href={`/services/${slug}`}
-            className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-[#F8F5EF] text-[#2F5D50] transition-colors duration-500 group-hover:bg-[#2F5D50] group-hover:text-white"
+            className="relative flex items-center justify-center w-12 h-12 rounded-2xl bg-[#F8F5EF] text-[#2F5D50] transition-colors duration-500 group-hover:bg-[#2F5D50] group-hover:text-white"
             aria-label={`Explore ${title}`}
           >
             {/* The absolute span makes the entire parent card clickable on desktop */}
