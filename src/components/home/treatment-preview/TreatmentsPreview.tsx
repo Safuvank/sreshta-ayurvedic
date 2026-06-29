@@ -23,7 +23,7 @@ export const TreatmentsPreview = () => {
           />
 
           <div className="mt-16 lg:mt-20">
-            <TreatmentPreviewGrid />
+            <TreatmentPreviewGrid limit={4} />
           </div>
 
           {/* Animated Bottom CTA */}
