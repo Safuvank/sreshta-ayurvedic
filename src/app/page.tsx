@@ -3,23 +3,23 @@ import { HospitalFacilities } from "../components/home/about-preview/HospitalFac
 // import { FacilitiesPreview } from "../components/home/facilities-preview/FacilitiesPreview";
 import Hero from "../components/home/Hero/Hero";
 import { ServicesPreview } from "../components/home/services-preview/ServicesPreview";
-// import { TestimonialsSection } from "../components/home/testimonials-preview/TestimonialSection";
 import { TestimonialsPreview } from "../components/home/testimonial-old-design/TestimonialsPreview";
 import { TreatmentsPreview } from "../components/home/treatment-preview/TreatmentsPreview";
 import { ConsultationCTA } from "../components/home/consultation-cta/ConsultationCTA";
+import { OurCoreSection } from "../components/home/our-core-preview/OurCoreSection";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <HospitalFacilities/>
+      <HospitalFacilities />
       <ServicesPreview />
       <TreatmentsPreview />
+      <OurCoreSection />
       {/* <FacilitiesPreview /> */}
       {/* <DoctorsPreview /> */}
       <TestimonialsPreview />
-      {/* <TestimonialsSection/> */}
-      <ConsultationCTA/>
+      <ConsultationCTA />
     </div>
   );
 }

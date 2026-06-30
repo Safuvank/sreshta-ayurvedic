@@ -4,7 +4,7 @@ export const services = [
     title: "Ayurveda Therapies",
     description:
       "Traditional therapies designed to restore balance and wellness.",
-    image: "/images/services/ayurveda-thrapies.jpg",
+    image: "/images/services/ayurveda-thrapies.png",
     slug: "ayurveda-therapies",
     hasDetailPage: true,
     longDescription:
@@ -59,7 +59,7 @@ export const services = [
       {
         title: "Greeva Vasti",
         malayalam: "ഗ്രീവ വസ്‌തി",
-        image: "/images/services/each/greeva-vasti.png",
+        image: "/images/services/each/greeva-vasti1.png",
         description:
           "The dough ring is placed over the back of the neck (cervical region) to hold the warm medicated oil.",
         focus: "Cervical spine and neck muscles.",
@@ -112,7 +112,7 @@ export const services = [
     id: 2,
     title: "Beauty Therapies",
     description: "Natural beauty treatments for skin, body and relaxation.",
-    image: "/images/services/beauty-therapies.jpeg",
+    image: "/images/services/beauty-therapies.png",
     slug: "beauty-therapies",
     hasDetailPage: true,
     longDescription:
@@ -190,7 +190,7 @@ export const services = [
     id: 3,
     title: "Yoga",
     description: "Holistic yoga sessions for physical and mental wellbeing.",
-    image: "/images/services/yoga.jpg",
+    image: "/images/services/youga.png",
     slug: "yoga",
     hasDetailPage: true,
     longDescription:
@@ -248,7 +248,7 @@ export const services = [
     id: 4,
     title: "Counselling",
     description: "Professional counselling to support emotional wellness.",
-    image: "/images/services/counciling.jpg",
+    image: "/images/services/counciling1.png",
     slug: "counselling",
     hasDetailPage: true,
     longDescription:
@@ -306,7 +306,7 @@ export const services = [
     id: 5,
     title: "Packages",
     description: "Special wellness packages tailored to individual needs.",
-    image: "/images/services/package.jpg",
+    image: "/images/services/packagess.png",
     slug: "packages",
     hasDetailPage: true,
     longDescription:
@@ -364,7 +364,7 @@ export const services = [
     id: 6,
     title: "Pharmacy",
     description: "Authentic Ayurvedic medicines and healthcare products.",
-    image: "/images/services/pharmacy.png",
+    image: "/images/services/pharmacynew.png",
     slug: "pharmacy",
     hasDetailPage: true,
     longDescription:

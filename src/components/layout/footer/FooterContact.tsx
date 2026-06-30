@@ -11,8 +11,8 @@ export const FooterContact = () => {
         <div className="flex items-start gap-4 text-gray-300 group">
           <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-[#C9A86A]" />
           <span className="leading-relaxed transition-colors group-hover:text-white">
-            32/1815 Guruvayurappan College,<br />
-            PO Pokkunnu, Kozhikkode, 673014
+            Pantheeramkavu P.O, Kozhikkode, <br />
+            Kerala, India 673019
           </span>
         </div>
 

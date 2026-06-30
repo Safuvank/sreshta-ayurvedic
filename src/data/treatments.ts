@@ -56,7 +56,7 @@ export const treatments = [
       "Preventive health and rejuvenation",
     ],
     category: "Detoxification & Rejuvenation",
-    image: "/images/treatments/panchakarma.png",
+    image: "/images/treatments/panchakarma2.png",
     slug: "panchakarma",
   },
   {
@@ -330,7 +330,7 @@ export const treatments = [
       "Restores lightness, clarity of mind, and energy",
     ],
     category: "Pradhana Karma (Main Panchakarma)",
-    image: "/images/treatments/vamanam.png",
+    image: "/images/treatments/vamanam2.png",
     slug: "vamanam",
   },
   {
