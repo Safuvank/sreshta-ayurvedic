@@ -349,7 +349,7 @@ export const treatments = [
       "Improves complexion",
     ],
     category: "Pradhana Karma (Main Panchakarma)",
-    image: "/images/treatments/virechana.png",
+    image: "/images/treatments/virechana1.png",
     slug: "virechanam",
   },
   {

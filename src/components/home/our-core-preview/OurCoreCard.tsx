@@ -46,7 +46,7 @@ export const OurCoreCard = ({
         {/* Updated Route Link */}
         <Link
           href={`/our-core/${slug}`}
-          className="group inline-flex items-center gap-2 text-[15px] font-medium text-[#9B2C43] transition-colors hover:text-[#7A1F32] mt-1 w-fit"
+          className="group inline-flex items-center gap-2 text-[15px] font-medium text-[#2F5D50] transition-colors hover:text-[#2F5D50] mt-1 w-fit"
         >
           Learn more
           <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-out group-hover:translate-x-1" />

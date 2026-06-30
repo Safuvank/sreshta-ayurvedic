@@ -21,7 +21,7 @@ export const ourCoreData: OurCoreCategory[] = [
     slug: "orthopaedic-diseases",
     description:
       "Ayurvedic management and therapies for joint, bone, and muscular disorders, focusing on pain relief and restoring mobility.",
-    image: "/images/orthopaedic.jpg",
+    image: "/images/core/orthopediac-deseases.png",
     conditions: [
       { en: "Joint Pain", ml: "സന്ധി വേദന" },
       { en: "Knee Joint Pain", ml: "കാൽ മുട്ടു വേദന" },
@@ -40,7 +40,7 @@ export const ourCoreData: OurCoreCategory[] = [
     slug: "gastrointestinal-diseases",
     description:
       "Holistic treatments to correct digestive imbalances, improve gut health, and treat chronic gastrointestinal issues naturally.",
-    image: "/images/gastrointestinal.jpg",
+    image: "/images/core/gastrointestinal-diseases.png",
     conditions: [
       { en: "Acidity", ml: "അസിഡിറ്റി" },
       { en: "Stomach Bloating", ml: "വയറുവീർപ്പ്" },
@@ -59,7 +59,7 @@ export const ourCoreData: OurCoreCategory[] = [
     slug: "lifestyle-diseases",
     description:
       "Comprehensive lifestyle and dietary interventions alongside authentic Ayurvedic therapies to manage metabolic and stress-related conditions.",
-    image: "/images/lifestyle.jpg",
+    image: "/images/core/life.png",
     conditions: [
       { en: "Diabetes", ml: "പ്രമേഹം" },
       { en: "Blood Pressure", ml: "രക്തസമ്മർദ്ദം" },
@@ -76,7 +76,7 @@ export const ourCoreData: OurCoreCategory[] = [
     slug: "urological-diseases",
     description:
       "Natural remedies and specific therapies to support kidney function and treat urinary tract disorders.",
-    image: "/images/urological.jpg",
+    image: "/images/core/rological.png",
     conditions: [
       { en: "Urinary Incontinence", ml: "മൂത്രം പിടിച്ചു വെയ്ക്കാൻ കഴിയായിക" },
       { en: "Urinary Stone", ml: "മൂത്രക്കല്ല്" },
