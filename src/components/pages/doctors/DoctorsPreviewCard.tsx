@@ -41,12 +41,13 @@ export const DoctorCard = ({
         
         {/* Header: Designation & Name */}
         <div className="mb-5">
-          <span className="text-xs font-bold tracking-[0.15em] text-[#C9A86A] uppercase mb-2 block">
-            {designation}
-          </span>
+          
           <h3 className="font-serif text-2xl lg:text-[26px] leading-tight text-gray-900 group-hover:text-[#2F5D50] transition-colors duration-300">
             {name}
           </h3>
+          <span className="text-xs font-bold tracking-[0.15em] text-[#C9A86A] uppercase mb-2 block">
+            {designation}
+          </span>
         </div>
 
         {/* Structured Data Rows (Highly scannable) */}
@@ -73,9 +74,9 @@ export const DoctorCard = ({
         </div>
 
         {/* Description */}
-        <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 mb-8">
+        {/* <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 mb-8">
           {description}
-        </p>
+        </p> */}
 
         {/* Action Button */}
         <div className="mt-auto">

@@ -50,14 +50,15 @@ export const OurCoreHero = () => {
           <motion.div variants={wordVariants} className="flex items-center justify-start gap-3 md:gap-4 mb-4 md:mb-6">
             <div className="w-8 md:w-12 h-[1px] bg-[#C9A86A]" />
             <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A86A]">
-              Specialized Healing
+              OUR EXPERTISE
+              {/* Specialized Healing */}
             </span>
           </motion.div>
 
           {/* Main Title */}
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight break-words">
             <span className="block overflow-hidden pb-2">
-              <motion.span variants={wordVariants} className="block">Our</motion.span>
+              <motion.span variants={wordVariants} className="block">Our Core</motion.span>
             </span>
             <span className="block overflow-hidden pb-2">
               <motion.span variants={wordVariants} className="block italic text-[#C9A86A]">Specializations</motion.span>

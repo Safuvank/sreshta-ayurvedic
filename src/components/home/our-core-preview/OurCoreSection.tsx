@@ -12,8 +12,8 @@ export const OurCoreSection = () => {
     <section className="relative py-16 lg:py-24 bg-[#FEFCF8] overflow-hidden">
       <Container>
         <SectionHeading
-          eyebrow="Specialized Care"
-          title="Our Core"
+          eyebrow="OUR EXPERTISE"
+          title="Our Core Specializations"
         />
 
         <div className="mt-10 md:mt-16 lg:mt-20">
@@ -56,7 +56,7 @@ export const OurCoreSection = () => {
 
             {/* Content Wrapper (Keeps text and icon above the background) */}
             <span className="relative z-10 flex items-center gap-3">
-              View Our Core
+              View Our all Core
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </Link>

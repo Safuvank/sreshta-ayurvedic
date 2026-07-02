@@ -14,7 +14,7 @@ export const TrustIndicators = ({ itemVariants }: TrustIndicatorsProps) => {
     <motion.div
       variants={itemVariants}
       // Main dark green container
-      className="w-full bg-[#2a4538] rounded-2xl md:rounded-[2rem] shadow-xl overflow-hidden py-6 lg:py-12 px-2 lg:px-4"
+      className="w-full bg-[#2a4538] rounded-2xl md:rounded-2xl shadow-xl overflow-hidden py-6 lg:py-12 px-2 lg:px-4"
     >
       {/* FIXED: Strictly 4 columns in one row across all devices */}
       <div className="grid grid-cols-4 w-full">
