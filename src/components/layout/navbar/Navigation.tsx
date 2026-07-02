@@ -8,14 +8,39 @@ export const navigation = [
       },
       {
         label: "Our Core",
-        // Replaced href with children array for the nested dropdown
+        // Added the complete list of core specializations
         children: [
-          { label: "Orthopedic Disease", href: "/our-core/orthopedic-disease" },
+          {
+            label: "Orthopaedic Diseases",
+            href: "/our-core/orthopaedic-diseases",
+          },
           {
             label: "Gastrointestinal Diseases",
             href: "/our-core/gastrointestinal-diseases",
           },
-          { label: "Lifestyle Diseases", href: "/our-core/lifestyle-diseases" },
+          {
+            label: "Life Style Diseases",
+            href: "/our-core/life-style-diseases",
+          },
+          {
+            label: "Urological Diseases",
+            href: "/our-core/urological-diseases",
+          },
+          {
+            label: "Neurological Diseases",
+            href: "/our-core/neurological-diseases",
+          },
+          { label: "Skin Diseases", href: "/our-core/skin-diseases" },
+          {
+            label: "Gynecological Diseases",
+            href: "/our-core/gynecological-diseases",
+          },
+          {
+            label: "Respiratory Diseases",
+            href: "/our-core/respiratory-diseases",
+          },
+          { label: "Eye Diseases", href: "/our-core/eye-diseases" },
+          { label: "ENT Diseases", href: "/our-core/ent-diseases" },
         ],
       },
       {
