@@ -7,6 +7,7 @@ interface TestimonialCardProps {
   rating: number;
   image: string;
   review: string;
+  designation?:string;
 }
 
 export const TestimonialCard = ({
@@ -15,6 +16,7 @@ export const TestimonialCard = ({
   rating,
   image,
   review,
+  designation,
 }: TestimonialCardProps) => {
   return (
     <article className="flex flex-col h-full bg-white p-8 rounded-3xl border border-gray-300 transition-all duration-300">
@@ -42,7 +44,7 @@ export const TestimonialCard = ({
         </div>
         <div>
           <h4 className="font-semibold text-gray-900 text-base">{name}</h4>
-          <p className="text-xs text-gray-400 mt-0.5">Verified Patient</p>
+          <p className="text-xs text-gray-400 mt-0.5">{designation}</p>
         </div>
       </div>
     </article>

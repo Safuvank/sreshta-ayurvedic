@@ -1,5 +1,5 @@
 export const featuredTestimonial = {
-  name: "Rajiv Nambiar",
+  name: "Samitha Varma",
   treatment: "Complete Panchakarma Detox",
   quote:
     "After struggling with chronic fatigue and joint inflammation for years, my 21-day stay here completely gave me my life back. The dedication of the doctors and the authenticity of the treatments are unmatched.",
@@ -10,19 +10,21 @@ export const featuredTestimonial = {
 export const testimonials = [
   {
     id: 1,
-    name: "Rahul Menon",
+    name: "Samitha Varma",
+    designation:
+      "Retired associate professor, Department of Botany, Zamorins guruvayurappan College, Kozhikode.",
     treatment: "Panchakarma",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/c_samitha.jpg",
     review:
-      "The treatment completely transformed my health. The doctors and staff were incredibly supportive throughout my healing journey.",
+      "Since I was having neck and shoulder pain I consulted Dr. Nanditha at Sreshta. As per her advice, I underwent 2 week's treatment like 'kizhi' and 'abhyanga' in the clinic. The clinic has a sophisticated ambience and has all other facilities. The therapists were really competent. I am feeling good after the treatment.",
   },
   {
     id: 2,
     name: "Anjali Nair",
     treatment: "Orthopedic Care",
     rating: 5,
-   image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "I experienced significant improvement in my joint pain after the treatment. The traditional therapies used here are truly effective.",
   },
@@ -31,7 +33,7 @@ export const testimonials = [
     name: "Fathima",
     treatment: "Lifestyle Disease Management",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "The personalized Ayurvedic approach helped me regain energy, balance my metabolism, and improve my overall quality of life.",
   },
@@ -40,7 +42,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -49,7 +51,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -58,7 +60,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -67,7 +69,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-   image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -76,7 +78,7 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
@@ -85,10 +87,8 @@ export const testimonials = [
     name: "David Smith",
     treatment: "Rejuvenation Therapy",
     rating: 5,
-    image: "/images/person.jpg",
+    image: "/images/testimonial/person.png",
     review:
       "A world-class authentic Ayurvedic experience. The facility is peaceful, and the care provided is exceptional.",
   },
-  
-
 ];
