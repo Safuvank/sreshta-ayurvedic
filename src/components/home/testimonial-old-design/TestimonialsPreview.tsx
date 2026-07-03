@@ -90,7 +90,6 @@ import { Container } from "../../common/Container";
 import { SectionHeading } from "../../common/SectionHeading";
 import { AutoSlidingTestimonials } from "./AutoSlidingTestimonial";
 import { VideoTestimonialHighlight } from "./VideoTestimonialHighlight";
-// 1. Import the new widget
 import { GoogleReviewsWidget } from "./GoogleReviewWidget"; 
 
 export const TestimonialsPreview = () => {
@@ -139,7 +138,7 @@ export const TestimonialsPreview = () => {
           className="mt-8 lg:mt-15 flex justify-center"
         >
           <Link
-            href="/patient-stories"
+            href="/testimonials"
             className="group relative overflow-hidden inline-flex items-center gap-3 rounded-xl border border-[#2F5D50] bg-transparent px-8 py-4 font-medium text-[#2F5D50] transition-colors duration-300 hover:text-white"
           >
             {/* Animated Hover Background */}
@@ -160,7 +159,7 @@ export const TestimonialsPreview = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.6 }}
         >
-          <GoogleReviewsWidget />
+          {/* <GoogleReviewsWidget /> */}
         </motion.div>
 
       </Container>

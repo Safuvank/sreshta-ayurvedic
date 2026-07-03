@@ -19,7 +19,7 @@ export const TestimonialCard = ({
   designation,
 }: TestimonialCardProps) => {
   return (
-    <article className="flex flex-col h-full bg-white p-8 rounded-3xl border border-gray-300 transition-all duration-300">
+    <article className="flex flex-col h-full bg-white p-8 rounded-2xl border border-gray-300 transition-all duration-300">
       {/* 1. Header: Stars & Treatment Info */}
       <div className="flex items-center justify-between gap-4 mb-6">
         <span className="text-xs font-semibold tracking-widest uppercase text-[#C9A86A] bg-[#F8F5EF] px-3 py-1 rounded-md">

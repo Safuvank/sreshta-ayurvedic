@@ -36,7 +36,7 @@ export const DoctorsHero = () => {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/doctors/doctors-hero.png" 
+          src="/images/doctors/hero-doctors.png" 
           alt="Our expert Ayurvedic practitioners"
           fill
           className="object-cover"

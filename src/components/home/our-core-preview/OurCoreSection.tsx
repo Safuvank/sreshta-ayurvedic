@@ -12,8 +12,8 @@ export const OurCoreSection = () => {
     <section className="relative py-16 lg:py-24 bg-[#FEFCF8] overflow-hidden">
       <Container>
         <SectionHeading
-          eyebrow="OUR EXPERTISE"
-          title="Our Core Specializations"
+          eyebrow="OUR CORE"
+          title="The Foundation of Our Ayurvedic Excellence"
         />
 
         <div className="mt-10 md:mt-16 lg:mt-20">

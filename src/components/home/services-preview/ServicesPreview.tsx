@@ -109,8 +109,8 @@ export const ServicesPreview = () => {
 
       <Container>
         <SectionHeading
-          eyebrow="Our Expertise"
-          title="Holistic Ayurvedic Solutions"
+          eyebrow="OUR AYURVEDIC SERVICES"
+          title="Comprehensive Care for Mind, Body & Wellness"
         />
 
         <div className="mt-16 lg:mt-24">

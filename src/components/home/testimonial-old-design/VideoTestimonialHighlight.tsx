@@ -7,7 +7,7 @@ import { featuredTestimonial } from "@/src/data/testimonials";
 
 export const VideoTestimonialHighlight = () => {
   return (
-    <div className="relative h-[450px] w-full max-w-[380px] rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-xl border border-gray-100">
+    <div className="relative h-[450px] w-full max-w-[380px] rounded-2xl overflow-hidden group cursor-pointer shadow-xl border border-gray-100">
       <Image
         src={featuredTestimonial.videoThumbnail}
         alt={featuredTestimonial.name}
