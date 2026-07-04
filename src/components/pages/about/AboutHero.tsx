@@ -33,10 +33,9 @@ export const AboutHero = () => {
 
   return (
     <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden pt-28 md:pt-32 min-h-[60vh] flex items-center">
-      {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/about/sreshta-building.png" /* <-- Add your image path here */
+          src="/images/about/sreshta-building.png"
           alt="Sreshta Ayurveda Hospital"
           fill
           className="object-cover"
@@ -55,16 +54,14 @@ export const AboutHero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          // Removed centering classes (mx-auto, text-center, flex-col, items-center)
           className="max-w-3xl"
         >
           {/* Top Badge Animation */}
           <motion.div
             variants={wordVariants}
-            // Changed justify-center to justify-start
             className="flex items-center justify-start gap-3 md:gap-4 mb-4 md:mb-6"
           >
-            <div className="w-8 md:w-12 h-[1px] bg-[#C9A86A]" />
+            <div className="w-8 md:w-12 h-1px bg-[#C9A86A]" />
             <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A86A]">
               About Sreshta
             </span>

@@ -14,7 +14,7 @@ export const TrustIndicators = ({ itemVariants }: TrustIndicatorsProps) => {
     <motion.div
       variants={itemVariants}
       // Main dark green container
-      className="w-full bg-[#2a4538] rounded-2xl md:rounded-2xl shadow-xl overflow-hidden py-6 lg:py-12 px-2 lg:px-4"
+      className="w-full bg-[#2a4538] rounded-2xl md:rounded-2xl shadow-xl overflow-hidden py-6 lg:py-6 px-2 lg:px-4"
     >
       {/* FIXED: Strictly 4 columns in one row across all devices */}
       <div className="grid grid-cols-4 w-full">
@@ -25,7 +25,7 @@ export const TrustIndicators = ({ itemVariants }: TrustIndicatorsProps) => {
             <div
               key={metric.id}
               // FIXED: Simplified borders. Now it just adds a right border to the first 3 items!
-              className={`flex flex-col items-center justify-start text-center group px-1 sm:px-2 lg:p-6 border-[#C9A86A]/20
+              className={`flex flex-col items-center justify-start text-center font-bold group px-1 sm:px-2 lg:p-6 border-[#C9A86A]/20
                 ${index !== 3 ? "border-r" : ""}
               `}
             >
@@ -43,7 +43,7 @@ export const TrustIndicators = ({ itemVariants }: TrustIndicatorsProps) => {
               </h3>
 
               {/* Metric Label: Extremely small on mobile so it fits the narrow columns */}
-              <p className="text-[7px] sm:text-[9px] md:text-xs font-medium text-white/90 uppercase tracking-widest whitespace-pre-line leading-tight md:leading-relaxed">
+              <p className="text-[7px] sm:text-[9px] md:text-xs font-semibold text-white/90 uppercase tracking-widest whitespace-pre-line leading-tight md:leading-relaxed">
                 {metric.label}
               </p>
             </div>

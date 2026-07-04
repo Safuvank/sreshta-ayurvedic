@@ -78,7 +78,7 @@ export const ServicesHero = () => {
             {/* The wrapper span hides the text when it's pushed down (overflow-hidden) */}
             <span className="block overflow-hidden pb-2">
               <motion.span variants={wordVariants} className="block">
-                Comprehensive
+                Comprehensive Care 
               </motion.span>
             </span>
             <span className="block overflow-hidden pb-2">
@@ -86,7 +86,7 @@ export const ServicesHero = () => {
                 variants={wordVariants}
                 className="block italic text-[#C9A86A]"
               >
-                Ayurvedic Care
+                for Mind, Body & Wellness
               </motion.span>
             </span>
           </h1>

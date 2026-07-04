@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 "use client";
 
 import Link from "next/link";
@@ -19,7 +9,7 @@ export const AboutCTA = () => {
   return (
     <section className="py-24 lg:py-32 bg-white text-center">
       <Container>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -30,11 +20,11 @@ export const AboutCTA = () => {
             Ready To Start Your Healing Journey?
           </h2>
           <p className="text-lg text-gray-600 mb-12 font-light">
-            Experience personalized Ayurvedic care from our highly experienced specialists. Take the first step towards a balanced, healthier life.
+            Experience personalized Ayurvedic care from our highly experienced
+            specialists. Take the first step towards a balanced, healthier life.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            
             {/* Animated Primary Button */}
             <Link
               href="/contacts"
@@ -55,7 +45,6 @@ export const AboutCTA = () => {
               <PhoneCall className="w-5 h-5" />
               Contact Us
             </Link>
-            
           </div>
         </motion.div>
       </Container>

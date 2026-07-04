@@ -47,16 +47,16 @@ export const TreatmentsHero = () => {
           <motion.div variants={wordVariants} className="flex items-center justify-start gap-3 md:gap-4 mb-4 md:mb-6">
             <div className="w-8 md:w-12 h-[1px] bg-[#C9A86A]" />
             <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A86A]">
-              Specialized Healing
+              OUR TREATMENTS
             </span>
           </motion.div>
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight break-words">
             <span className="block overflow-hidden pb-2">
-              <motion.span variants={wordVariants} className="block">Authentic</motion.span>
+              <motion.span variants={wordVariants} className="block">Traditional Ayurvedic</motion.span>
             </span>
             <span className="block overflow-hidden pb-2">
-              <motion.span variants={wordVariants} className="block italic text-[#C9A86A]">Ayurvedic Treatments</motion.span>
+              <motion.span variants={wordVariants} className="block italic text-[#C9A86A]">Therapies for Complete Healing</motion.span>
             </span>
           </h1>
 

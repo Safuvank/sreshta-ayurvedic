@@ -9,7 +9,7 @@ const items = [
     title: "Our Mission",
     icon: Target,
     description:
-      "To provide authentic Ayurvedic healthcare through personalized treatments, rigorous clinical standards, and holistic wellness solutions.",
+      "Sreshta Multi-Specialty Ayurveda Hospital represents the Ayurvedic Way of Advanced Care. Our facility is dedicated to the dual objectives of maintaining positive health and providing effective treatment through scientifically grounded Ayurvedic protocols.",
   },
   {
     title: "Our Vision",

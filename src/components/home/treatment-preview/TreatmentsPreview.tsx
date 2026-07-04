@@ -17,7 +17,7 @@ export const TreatmentsPreview = () => {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            eyebrow="OUR AYURVEDIC TREATMENTS"
+            eyebrow="OUR TREATMENTS"
             title="Traditional Ayurvedic Therapies for Complete Healing"
             // description="Explore our specialized Ayurvedic treatments focused on targeting the root cause of illness and bringing long-lasting rejuvenation."
           />
