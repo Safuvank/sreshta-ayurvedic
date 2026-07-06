@@ -17,7 +17,7 @@ export const FilterBar = ({ categories, activeCategory, onSelectCategory }: Filt
             <button
               key={category}
               onClick={() => onSelectCategory(category)}
-              className={`whitespace-nowrap px-6 py-2.5 rounded-2xl text-sm font-medium transition-all duration-300 ${
+              className={`whitespace-nowrap px-6 py-2.5 rounded-2xl text-sm font-medium transition-all duration-300 cursor-pointer ${
                 activeCategory === category
                   ? "bg-[#2F5D50] text-white shadow-md"
                   : "bg-white text-gray-600 border border-gray-200 hover:border-[#2F5D50] hover:text-[#2F5D50]"

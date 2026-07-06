@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Container } from "../../common/Container";
 import { trustMetrics } from "@/src/data/about";
+import { SectionHeading } from "../../common/SectionHeading";
 
 export const OrganizationOverview = () => {
   return (
@@ -27,9 +28,10 @@ export const OrganizationOverview = () => {
 
           {/* Right: Content & Structured Data */}
           <div className="lg:col-span-7">
-            <h2 className="font-serif text-3xl md:text-6xl text-gray-900 mb-6">
-              A Legacy of Authentic Care
-            </h2>
+            <SectionHeading
+  title="A Legacy of Authentic Care"
+  align="left" 
+/>
 
             <p className="text-gray-600 leading-relaxed mb-10 font-light">
               Sreshta Multi specialty Ayurveda clinic is a premium ayurveda

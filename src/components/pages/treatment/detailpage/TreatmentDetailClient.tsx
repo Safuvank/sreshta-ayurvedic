@@ -6,6 +6,9 @@ import { motion, Variants } from "framer-motion";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Container } from "@/src/components/common/Container"; // Adjust path if needed
 
+// --- ANIMATION VARIANTS ---
+
+// Variants for body content
 const fadeUpVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -16,11 +19,29 @@ const staggerContainer = {
   show: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
 
+// Variants for Hero Word-by-Word Animation
+const heroContainerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.05, delayChildren: 0.1 },
+  },
+};
+
+const heroWordVariants = {
+  hidden: { opacity: 0, y: "100%" },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 export const TreatmentDetailClient = ({ treatment }: { treatment: any }) => {
   return (
     <main className="min-h-screen bg-[#F8F5EF] pb-24">
-      {/* 1. Hero Section */}
-      <section className="relative w-full h-[50vh] min-h-[400px] flex items-end pb-12">
+      {/* 1. Full-Width Hero Image Banner */}
+      <section className="relative pt-20 pb-20 lg:pb-20 min-h-[40vh] lg:min-h-[50vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={treatment.image}
@@ -29,42 +50,57 @@ export const TreatmentDetailClient = ({ treatment }: { treatment: any }) => {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1F3D35] via-[#1F3D35]/70 to-transparent" />
+          <div className="absolute inset-0 bg-[#1F3D35]/85" />
         </div>
 
         <Container className="relative z-10 w-full">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Link
-              href="/treatments"
-              className="inline-flex items-center text-white/80 hover:text-[#C9A86A] transition-colors mb-6 text-sm uppercase tracking-wider"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Treatments
-            </Link>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
+            variants={heroContainerVariants}
             initial="hidden"
             animate="show"
           >
-            {/* <motion.span
-              variants={fadeUpVariants}
-              className="inline-block px-3 py-1 bg-[#C9A86A]/20 text-[#C9A86A] text-sm font-semibold tracking-widest uppercase rounded-full mb-4 border border-[#C9A86A]/30"
-            >
-              {treatment.category}
-            </motion.span> */}
+            {/* Back Button */}
+            <div className="overflow-hidden mb-6 md:mb-8">
+              <motion.div variants={heroWordVariants}>
+                <Link
+                  href="/treatments"
+                  className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold tracking-widest text-[#C9A86A] uppercase hover:text-white transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Treatments
+                </Link>
+              </motion.div>
+            </div>
 
-            <motion.h1
-              variants={fadeUpVariants}
-              className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4"
-            >
-              {treatment.title}
-            </motion.h1>
+            {/* Title Animation */}
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-6 leading-tight break-words flex flex-wrap gap-x-3 lg:gap-x-4 gap-y-1">
+              {treatment.title.split(" ").map((word: string, index: number) => (
+                <span key={index} className="block overflow-hidden pb-2">
+                  <motion.span variants={heroWordVariants} className="block">
+                    {word}
+                  </motion.span>
+                </span>
+              ))}
+            </h1>
+
+            {/* Subtitle / Description Animation */}
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl font-light leading-relaxed">
+              {treatment.description
+                .split(" ")
+                .map((word: string, index: number) => (
+                  <span
+                    key={index}
+                    className="inline-block overflow-hidden align-bottom"
+                  >
+                    <motion.span
+                      variants={heroWordVariants}
+                      className="inline-block"
+                    >
+                      {word}&nbsp;
+                    </motion.span>
+                  </span>
+                ))}
+            </p>
           </motion.div>
         </Container>
       </section>
@@ -80,15 +116,6 @@ export const TreatmentDetailClient = ({ treatment }: { treatment: any }) => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            <motion.div variants={fadeUpVariants}>
-              <h2 className="text-3xl font-serif text-[#2F5D50] mb-4">
-                Overview
-              </h2>
-              <p className="text-xl text-gray-700 leading-relaxed font-medium">
-                {treatment.description}
-              </p>
-            </motion.div>
-
             <motion.div variants={fadeUpVariants}>
               <h3 className="text-2xl font-serif text-[#2F5D50] mb-4">
                 About the Therapy

@@ -20,7 +20,7 @@ export const navigation = [
           },
           {
             label: "Life Style Diseases",
-            href: "/our-core/life-style-diseases",
+            href: "/our-core/lifestyle-diseases",
           },
           {
             label: "Urological Diseases",

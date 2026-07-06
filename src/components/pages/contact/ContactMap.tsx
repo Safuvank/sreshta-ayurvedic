@@ -20,11 +20,11 @@ export const ContactMap = () => {
             <h3 className="font-serif text-4xl lg:text-5xl text-[#2F5D50] mb-6">
               Find Us <span className="text-[#C9A86A] italic">Easily</span>
             </h3>
-            <p className="text-gray-500 font-light text-lg leading-relaxed">
+            {/* <p className="text-gray-500 font-light text-lg leading-relaxed">
               Located in the serene heart of Kerala, our facility is easily
               accessible yet peacefully tucked away to provide the perfect
               environment for healing.
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Full-width Google Map iframe */}

@@ -18,7 +18,7 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
         <motion.span
           variants={itemVariants}
           // FIXED: Strictly left aligned
-          className="mx-0 inline-flex rounded-full border border-[#C9A86A]/40 bg-[#C9A86A]/5 
+          className="mx-0 inline-flex rounded-xl border border-[#C9A86A]/40 bg-[#C9A86A]/5 
           px-3 py-1.5 text-[8px] tracking-widest
           md:px-4 md:py-2 md:text-xs md:tracking-[0.15em]
           font-bold text-[#C9A86A] uppercase backdrop-blur-md"
@@ -28,7 +28,7 @@ export const HeroContent = ({ itemVariants }: HeroContentProps) => {
       </div>
 
       {/* 2. Heading Animation (Line-by-Line with your custom mobile breaks) */}
-      <h1 className="mt-2 mb-9 font-serif text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.4] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left">
+      <h1 className="mt-2 mb-5 font-serif text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.4] md:leading-[1.12] text-[#1F3D35] tracking-tight text-left">
         <span className="inline-block overflow-hidden align-bottom pb-1 md:pb-2">
           <motion.span variants={itemVariants} className="inline-block">
             Sreshta

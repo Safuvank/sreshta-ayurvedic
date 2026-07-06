@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Container } from "../../common/Container";
+import { SectionHeading } from "../../common/SectionHeading";
 
 // Updated AnimatedText to accept variants for orchestration
 const AnimatedText = ({ text, variants }: { text: string; variants: any }) => {
@@ -18,7 +19,11 @@ const AnimatedText = ({ text, variants }: { text: string; variants: any }) => {
       variants={variants} // Use the variants passed from parent
     >
       {words.map((word, index) => (
-        <motion.span variants={child} style={{ marginRight: "6px" }} key={index}>
+        <motion.span
+          variants={child}
+          style={{ marginRight: "6px" }}
+          key={index}
+        >
           {word}
         </motion.span>
       ))}
@@ -31,7 +36,7 @@ export const BrandStory = () => {
     "Sreshta Multi specialty Ayurveda clinic is a premium ayurveda centre where the traditional system of ayurveda is in confluence with modern medical techniques, without compromising the authenticity of the Science. Our Ayurveda centre in Kerala seamlessly blends modern diagnostics, yoga, meditation and counselling with the ancient art of Ayurveda to deliver a unique east-meets-west healing experience that will revive and revitalise you.",
     "We all know Ayurveda is the “Science of Life” and not merely a healing system. So we believe that this science can enhance the standards of your well being not only by healing your ailments, but also by providing an in-depth knowledge about dos and don’ts of your day today life. To ensure this we have tried to integrate the healing concept with the wellness concept which is very much essential in this modern era.",
     "We ensure quality service to our patients by meeting all the standards and religiously following the principles of ayurveda and medical ethics. We are blessed to have a team of eminent Doctors, Yoga instructors, wellness counsellors, therapists and other paramedical staff to ensure that all your health needs are taken care of with out compromising the quality, tradition and hospitality.",
-    "Our services includes consultation, Ayurveda Therapies, Beauty Therapies, Yoga, Counselling, Packages, and Pharmacy."
+    "Our services includes consultation, Ayurveda Therapies, Beauty Therapies, Yoga, Counselling, Packages, and Pharmacy.",
   ];
 
   // Parent container variants to orchestrate the sequential paragraph reveal
@@ -58,13 +63,11 @@ export const BrandStory = () => {
     <section className="py-20 lg:py-32 bg-white">
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4 block">Our Story</span>
-            <div className="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1]">
-              <AnimatedText text="Our Journey of Authentic Healing" variants={paragraphVariants} />
-            </div>
-          </motion.div>
+          <SectionHeading
+            eyebrow="Our Story"
+            title="Our Journey of Authentic Healing"
+            align="left"
+          />
 
           {/* Sequential Paragraph Container */}
           <motion.div
@@ -75,7 +78,11 @@ export const BrandStory = () => {
             viewport={{ once: true }}
           >
             {paragraphs.map((para, idx) => (
-              <AnimatedText key={idx} text={para} variants={paragraphVariants} />
+              <AnimatedText
+                key={idx}
+                text={para}
+                variants={paragraphVariants}
+              />
             ))}
           </motion.div>
         </div>
