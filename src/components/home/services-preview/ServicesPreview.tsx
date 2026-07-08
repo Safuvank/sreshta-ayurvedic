@@ -75,22 +75,22 @@
 //               <Link
 //                 href="/services"
 //                 className="
-//                   group 
-//                   relative 
-//                   overflow-hidden 
-//                   inline-flex 
-//                   rounded-2xl 
-//                   border 
-//                   border-[#2F5D50] 
-//                   bg-transparent 
-//                   px-8 
-//                   py-4 
-//                   font-medium 
-//                   text-[#2F5D50] 
-//                   transition-all 
-//                   duration-300 
-//                   hover:text-white 
-//                   hover:shadow-lg 
+//                   group
+//                   relative
+//                   overflow-hidden
+//                   inline-flex
+//                   rounded-2xl
+//                   border
+//                   border-[#2F5D50]
+//                   bg-transparent
+//                   px-8
+//                   py-4
+//                   font-medium
+//                   text-[#2F5D50]
+//                   transition-all
+//                   duration-300
+//                   hover:text-white
+//                   hover:shadow-lg
 //                   hover:shadow-[#2F5D50]/20
 //                 "
 //               >
@@ -149,22 +149,22 @@
 //             <Link
 //               href="/services"
 //               className="
-//                 group 
-//                 relative 
-//                 overflow-hidden 
-//                 inline-flex 
-//                 rounded-2xl 
-//                 border 
-//                 border-[#2F5D50] 
-//                 bg-transparent 
-//                 px-8 
-//                 py-4 
-//                 font-medium 
-//                 text-[#2F5D50] 
-//                 transition-all 
-//                 duration-300 
-//                 hover:text-white 
-//                 hover:shadow-lg 
+//                 group
+//                 relative
+//                 overflow-hidden
+//                 inline-flex
+//                 rounded-2xl
+//                 border
+//                 border-[#2F5D50]
+//                 bg-transparent
+//                 px-8
+//                 py-4
+//                 font-medium
+//                 text-[#2F5D50]
+//                 transition-all
+//                 duration-300
+//                 hover:text-white
+//                 hover:shadow-lg
 //                 hover:shadow-[#2F5D50]/20
 //               "
 //             >
@@ -181,15 +181,13 @@
 //   );
 // };
 
-
-
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Container } from "../../common/Container"; 
+import { Container } from "../../common/Container";
 import { SectionHeading } from "../../common/SectionHeading";
 
 // A reusable component for the staggered image cards
@@ -236,7 +234,6 @@ export const ServicesPreview = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* LEFT COLUMN: Text Content & Actions */}
           <div className="flex flex-col items-start max-w-lg lg:pr-10">
-            
             <SectionHeading
               eyebrow="Our Services"
               title="Comprehensive Care for Mind, Body & Wellness"
@@ -245,7 +242,7 @@ export const ServicesPreview = () => {
             />
 
             {/* DESKTOP BUTTON: Hidden on mobile, visible on lg screens and up */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -276,7 +273,7 @@ export const ServicesPreview = () => {
               >
                 <span className="absolute inset-0 translate-y-full bg-[#2F5D50] transition-transform duration-300 ease-out group-hover:translate-y-0" />
                 <span className="relative z-10 flex items-center gap-3">
-                  Explore all programs
+                  Explore All Services
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </Link>

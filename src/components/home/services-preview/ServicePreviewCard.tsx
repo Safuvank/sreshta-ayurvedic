@@ -23,7 +23,7 @@ export const ServicePreviewCard = ({
           src={image}
           alt={title}
           fill
-          className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+          className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110 "
         />
         {/* Soft elegant tint on hover */}
         <div className="absolute inset-0 bg-[#2F5D50]/0 transition-colors duration-500 group-hover:bg-[#2F5D50]/10 mix-blend-multiply" />
@@ -31,7 +31,7 @@ export const ServicePreviewCard = ({
 
       {/* Content Container */}
       <div className="flex flex-1 flex-col px-5 py-6 lg:px-6 lg:py-8">
-        <h3 className="font-serif text-2xl text-gray-900 group-hover:text-[#2F5D50] transition-colors duration-300">
+        <h3 className="font-serif text-2xl text-gray-900 group-hover:text-[#2F5D50] transition-colors duration-300 ">
           {title}
         </h3>
 
