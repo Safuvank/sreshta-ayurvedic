@@ -79,7 +79,7 @@ export default function FloatingButton({ onClick }: FloatingButtonProps) {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 1.2 }}
       // Fixed the broken class and added responsive positioning
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] flex flex-col items-end group pointer-events-auto"
+      className="fixed bottom-[35%] right-[5%] sm:bottom-6 sm:right-6 z-[9999] flex flex-col items-end group pointer-events-auto"
     >
       {/* Tooltip that appears on hover (Hidden on mobile to prevent clipping) */}
       <div className="absolute -top-12 right-0 hidden sm:block bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-xl shadow-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap border border-gray-100">
