@@ -1,4 +1,5 @@
-import { chatbotFAQs } from "@/src/data/chatbot";
+import { chatbotFAQs } from "../data/chatbot";
+import { Message } from "../app/types/chatbot";
 
 const DEFAULT_REPLY =
   "Sorry, I couldn't understand your question. Please contact our reception or choose one of the suggested questions.";

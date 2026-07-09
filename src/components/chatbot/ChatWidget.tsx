@@ -12,7 +12,7 @@ export default function ChatWidget() {
     {
       id: 1,
       sender: "bot",
-      text: "Hello 👋 Welcome to Sreshta Ayurveda Hospital. How may I assist you today?",
+      text: "Hello 👋 Welcome to Sreshta Ayurveda Hospital. How may I assist you today\n\nYou can ask me about:\n• Consultation timings\n• Appointments\n• Doctors\n• Treatments\n• Panchakarma\n• Contact details\n• Hospital location?",
     },
   ]);
 

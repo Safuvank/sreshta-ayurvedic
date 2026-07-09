@@ -290,7 +290,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { Container } from "@/src/components/common/Container";
+import { Container } from "../../common/Container";
 
 interface Video {
   id: string | number;

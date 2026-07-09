@@ -37,3 +37,26 @@ body {
     scrollbar-width: none;
   }
 }
+
+
+
+/* Add to your globals.css */
+
+/* 1. Fix the phone input text box */
+.custom-phone-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+
+.custom-phone-input input::placeholder {
+  color: #9ca3af; 
+}
+
+/* 2. FIX: Style the country dropdown options */
+.PhoneInputCountrySelect option {
+  background-color: #1A362E; /* Matches your input background */
+  color: white; /* Makes text visible */
+}
