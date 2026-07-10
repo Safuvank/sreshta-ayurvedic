@@ -35,7 +35,7 @@ const features = [
 
 export const WellnessExperience = () => {
   return (
-    <section className="bg-[#121A16] py-20 lg:py-32 overflow-hidden text-white">
+    <section className="bg-[#121A16] py-10 lg:py-16 overflow-hidden text-white">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Content */}
@@ -48,15 +48,15 @@ export const WellnessExperience = () => {
           >
             <div>
               <SectionHeading
-                eyebrow="Discover Sreshta Ayurveda"
+                // eyebrow="Discover Sreshta Ayurveda"
                 title="A complete wellness experience"
                 isDark={true}
                 align="left" /* Remove this line if you want it to use your default "center" alignment! */
               />
-              <p className="text-gray-400 font-light text-lg">
+              {/* <p className="text-gray-400 font-light text-lg">
                 Thoughtfully designed spaces and amenities that support every
                 part of your stay.
-              </p>
+              </p> */}
             </div>
 
             <div className="flex flex-col space-y-6 pt-4">

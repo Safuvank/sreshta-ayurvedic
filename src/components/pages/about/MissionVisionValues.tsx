@@ -77,10 +77,10 @@ import { Container } from "../../common/Container";
 
 export const MissionVisionValues = () => {
   return (
-    <section className="py-24 lg:py-32 bg-[#1F3D35]">
+    <section className="py-12 lg:py-20 bg-[#1F3D35]">
       <Container>
         {/* Section Header */}
-        <div className="mb-12 lg:mb-16">
+        {/* <div className="mb-12 lg:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export const MissionVisionValues = () => {
           >
             Our Guiding <span className="text-[#C9A86A] italic">Philosophy</span>
           </motion.h2>
-        </div>
+        </div> */}
 
         {/* Bento Box Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
