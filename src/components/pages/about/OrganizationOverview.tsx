@@ -217,12 +217,7 @@ export const OrganizationOverview = () => {
               
               <SectionHeading 
                 eyebrow="Who We Are"
-                title={
-                  <>
-                    A Legacy of <br />
-                    <span className="text-[#C9A86A] italic">Authentic Care</span>
-                  </>
-                }
+                title="A Legacy of Authentic Care"
                 align="left" 
                 isDark={false} 
               />
