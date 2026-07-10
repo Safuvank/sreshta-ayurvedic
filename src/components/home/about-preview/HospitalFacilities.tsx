@@ -19,7 +19,7 @@ export const HospitalFacilities = () => {
   };
 
   return (
-    <section className="py-5 lg:py-16 bg-[#ffffff] relative">
+    <section className="py-5 lg:py-16 bg-[#F8F5EF] relative">
       <Container>
         {/* Integrated Section Heading */}
         {/* <div className="invisible mb-8">

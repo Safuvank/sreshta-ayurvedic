@@ -1,168 +1,15 @@
-
-
-
-
-// "use client";
-
-// import Link from "next/link";
-// import { motion } from "framer-motion";
-// import { ArrowRight } from "lucide-react";
-// import { Container } from "../../common/Container"; // Adjust path as needed
-// import { OurCoreGrid } from "./OurCoreGrid";
-
-// export const OurCoreSection = () => {
-//   return (
-//     <section className="relative py-16 lg:py-24 bg-[#2a4538] overflow-hidden">
-//       <Container>
-//         {/* Centered Header matching the reference */}
-//         <motion.div 
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true, margin: "-100px" }}
-//           transition={{ duration: 0.6 }}
-//           className="text-center max-w-3xl mx-auto mb-12 lg:mb-20"
-//         >
-//           <span className="text-xs font-semibold tracking-[0.2em] text-[#C9A86A] uppercase mb-4 block">
-//             Where We Support
-//           </span>
-//           <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">
-//             Balance and Healing
-//           </h2>
-//           <p className="text-gray-300 font-light text-base lg:text-lg leading-relaxed">
-//             Whether you are seeking relief from specific health conditions, or need a meaningful reset to your life, our core therapies can support your journey.
-//           </p>
-//         </motion.div>
-
-//         {/* The Grid / Mobile Carousel */}
-//         <div>
-//           <OurCoreGrid limit={4}  isDarkTheme={true} />
-//         </div>
-
-//         {/* Bottom Action Button - Updated for Dark Theme */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6, delay: 0.4 }}
-//           className="mt-12 md:mt-16 text-center"
-//         >
-//           <Link
-//             href="/our-core"
-//             className="
-//               group 
-//               relative 
-//               overflow-hidden 
-//               inline-flex 
-//               rounded-2xl 
-//               border 
-//               border-[#C9A86A] 
-//               bg-transparent 
-//               px-8 
-//               py-4 
-//               font-medium 
-//               text-[#C9A86A] 
-//               transition-all 
-//               duration-300 
-//               hover:text-[#2a4538] 
-//               hover:shadow-lg 
-//               hover:shadow-[#C9A86A]/20
-//             "
-//           >
-//             <span className="absolute inset-0 translate-y-full bg-[#C9A86A] transition-transform duration-300 ease-out group-hover:translate-y-0" />
-//             <span className="relative z-10 flex items-center gap-3">
-//               View All Core Therapies
-//               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-//             </span>
-//           </Link>
-//         </motion.div>
-//       </Container>
-//     </section>
-//   );
-// };
-
-
-
-
-
-
-// "use client";
-
-// import Link from "next/link";
-// import { motion } from "framer-motion";
-// import { ArrowRight } from "lucide-react";
-// import { Container } from "../../common/Container"; // Adjust path as needed
-// import { OurCoreGrid } from "./OurCoreGrid";
-// import { SectionHeading } from "../../common/SectionHeading";
-
-// export const OurCoreSection = () => {
-//   return (
-//     <section className="relative py-16 lg:py-24 bg-[#2a4538] overflow-hidden">
-//       <Container>
-//         {/* Centered Header using reusable component */}
-//         <div className="mb-12 lg:mb-20">
-//           <SectionHeading
-//             eyebrow="Where We Support"
-//             title="Balance and Healing"
-//             // description="Whether you are seeking relief from specific health conditions, or need a meaningful reset to your life, our core therapies can support your journey."
-//             align="center"
-//           />
-//         </div>
-
-//         {/* The Grid / Mobile Carousel */}
-//         <div>
-//           <OurCoreGrid limit={4} isDarkTheme={true} />
-//         </div>
-
-//         {/* Bottom Action Button - Updated for Dark Theme */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6, delay: 0.4 }}
-//           className="mt-12 md:mt-16 text-center"
-//         >
-//           <Link
-//             href="/our-core"
-//             className="
-//               group 
-//               relative 
-//               overflow-hidden 
-//               inline-flex 
-//               rounded-2xl 
-//               border 
-//               border-[#C9A86A] 
-//               bg-transparent 
-//               px-8 
-//               py-4 
-//               font-medium 
-//               text-[#C9A86A] 
-//               transition-all 
-//               duration-300 
-//               hover:text-[#2a4538] 
-//               hover:shadow-lg 
-//               hover:shadow-[#C9A86A]/20
-//             "
-//           >
-//             <span className="absolute inset-0 translate-y-full bg-[#C9A86A] transition-transform duration-300 ease-out group-hover:translate-y-0" />
-//             <span className="relative z-10 flex items-center gap-3">
-//               View All Core Therapies
-//               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-//             </span>
-//           </Link>
-//         </motion.div>
-//       </Container>
-//     </section>
-//   );
-// };
-
-
 "use client";
 
 import Link from "next/link";
+
 import { motion } from "framer-motion";
+
 import { ArrowRight } from "lucide-react";
+
 import { Container } from "../../common/Container";
+
 import { OurCoreGrid } from "./OurCoreGrid";
+
 import { SectionHeading } from "../../common/SectionHeading";
 
 export const OurCoreSection = () => {
@@ -170,22 +17,26 @@ export const OurCoreSection = () => {
     <section className="relative py-16 lg:py-24 bg-[#2a4538] overflow-hidden">
       <Container>
         {/* Centered Header using reusable component with isDark flag */}
+
         <div className="mb-12 lg:mb-20">
           <SectionHeading
             eyebrow="Where We Support"
             title="Balance and Healing"
             // description="Whether you are seeking relief from specific health conditions, or need a meaningful reset to your life, our core therapies can support your journey."
+
             align="center"
-            isDark={true} 
+            isDark={true}
           />
         </div>
 
         {/* The Grid / Mobile Carousel */}
+
         <div>
           <OurCoreGrid limit={4} isDarkTheme={true} />
         </div>
 
         {/* Bottom Action Button */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -196,26 +47,41 @@ export const OurCoreSection = () => {
           <Link
             href="/our-core"
             className="
-              group 
-              relative 
-              overflow-hidden 
-              inline-flex 
-              rounded-2xl 
-              border 
-              border-[#C9A86A] 
-              bg-transparent 
-              px-8 
-              py-4 
-              font-medium 
-              text-[#C9A86A] 
-              transition-all 
-              duration-300 
-              hover:text-[#2a4538] 
-              hover:shadow-lg 
+
+              group
+              relative
+              overflow-hidden
+              inline-flex
+              rounded-2xl
+
+              border
+
+              border-[#C9A86A]
+
+              bg-transparent
+
+              px-8
+
+              py-4
+
+              font-medium
+
+              text-[#C9A86A]
+
+              transition-all
+
+              duration-300
+
+              hover:text-[#2a4538]
+
+              hover:shadow-lg
+
               hover:shadow-[#C9A86A]/20
+
             "
           >
             <span className="absolute inset-0 translate-y-full bg-[#C9A86A] transition-transform duration-300 ease-out group-hover:translate-y-0" />
+
             <span className="relative z-10 flex items-center gap-3">
               View All Core Therapies
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />

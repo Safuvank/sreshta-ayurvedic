@@ -4,6 +4,7 @@ import { BrandStory } from "@/src/components/pages/about/BrandStory";
 import { MissionVisionValues } from "@/src/components/pages/about/MissionVisionValues";
 import { FacilitiesShowcase } from "@/src/components/pages/about/FacilitiesShowcase";
 import { ConsultationCTA } from "@/src/components/home/consultation-cta/ConsultationCTA";
+import { WhyChooseUsAlt } from "@/src/components/pages/about/WhyChooseUs";
 
 export const metadata = {
   title: "About Us | Sreshta Ayurvedic Hospital",
@@ -16,8 +17,10 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <AboutHero />
       <BrandStory />
-      <OrganizationOverview />
       <MissionVisionValues />
+      <WhyChooseUsAlt/>
+      <OrganizationOverview />
+      
       <FacilitiesShowcase />
      <ConsultationCTA/>
     </main>

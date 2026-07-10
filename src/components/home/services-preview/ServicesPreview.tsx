@@ -4,7 +4,8 @@
 // import Image from "next/image";
 // import { motion } from "framer-motion";
 // import { ArrowRight } from "lucide-react";
-// import { Container } from "../../common/Container"; // Adjust path as needed
+// import { Container } from "../../common/Container";
+// import { SectionHeading } from "../../common/SectionHeading";
 
 // // A reusable component for the staggered image cards
 // const StaggeredImageCard = ({
@@ -49,59 +50,52 @@
 //       <Container>
 //         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 //           {/* LEFT COLUMN: Text Content & Actions */}
-//           <motion.div
-//             initial={{ opacity: 0, x: -30 }}
-//             whileInView={{ opacity: 1, x: 0 }}
-//             viewport={{ once: true, margin: "-100px" }}
-//             transition={{ duration: 0.8 }}
-//             className="flex flex-col items-start max-w-lg lg:pr-10"
-//           >
-//             <span className="text-sm font-semibold tracking-[0.2em] text-[#C9A86A] uppercase mb-4 lg:mb-5 block">
-//               Our Services
-//             </span>
-
-//             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#1A202C] leading-[1.15] mb-5 lg:mb-6">
-//               Comprehensive Care for Mind, Body & Wellness
-//             </h2>
-
-//             <p className="text-gray-600 font-light text-base lg:text-lg leading-relaxed mb-8 lg:mb-10">
-//               Explore our full range of traditional therapies, natural beauty
-//               treatments, and holistic wellness programs designed to restore
-//               your mind, body, and spirit to its natural state of harmony.
-//             </p>
+//           <div className="flex flex-col items-start max-w-lg lg:pr-10">
+//             <SectionHeading
+//               eyebrow="Our Services"
+//               title="Comprehensive Care for Mind, Body & Wellness"
+//               description="Explore our full range of traditional therapies, natural beauty treatments, and holistic wellness programs designed to restore your mind, body, and spirit to its natural state of harmony."
+//               align="left"
+//             />
 
 //             {/* DESKTOP BUTTON: Hidden on mobile, visible on lg screens and up */}
-//             <div className="hidden lg:flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8">
+//             <motion.div
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true, margin: "-100px" }}
+//               transition={{ duration: 0.6, delay: 0.2 }}
+//               className="hidden lg:flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 mt-8 lg:mt-10"
+//             >
 //               <Link
 //                 href="/services"
 //                 className="
-//                   group
-//                   relative
-//                   overflow-hidden
-//                   inline-flex
-//                   rounded-2xl
-//                   border
-//                   border-[#2F5D50]
-//                   bg-transparent
-//                   px-8
-//                   py-4
-//                   font-medium
-//                   text-[#2F5D50]
-//                   transition-all
-//                   duration-300
-//                   hover:text-white
-//                   hover:shadow-lg
+//                   group 
+//                   relative 
+//                   overflow-hidden 
+//                   inline-flex 
+//                   rounded-2xl 
+//                   border 
+//                   border-[#2F5D50] 
+//                   bg-transparent 
+//                   px-8 
+//                   py-4 
+//                   font-medium 
+//                   text-[#2F5D50] 
+//                   transition-all 
+//                   duration-300 
+//                   hover:text-white 
+//                   hover:shadow-lg 
 //                   hover:shadow-[#2F5D50]/20
 //                 "
 //               >
 //                 <span className="absolute inset-0 translate-y-full bg-[#2F5D50] transition-transform duration-300 ease-out group-hover:translate-y-0" />
 //                 <span className="relative z-10 flex items-center gap-3">
-//                   Explore all programs
+//                   Explore All Services
 //                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
 //                 </span>
 //               </Link>
-//             </div>
-//           </motion.div>
+//             </motion.div>
+//           </div>
 
 //           {/* RIGHT COLUMN: Responsive Image Collage */}
 //           <div className="relative w-full h-auto lg:h-[600px] mt-2 lg:mt-0 grid grid-cols-2 gap-3 sm:gap-4 lg:block">
@@ -149,22 +143,22 @@
 //             <Link
 //               href="/services"
 //               className="
-//                 group
-//                 relative
-//                 overflow-hidden
-//                 inline-flex
-//                 rounded-2xl
-//                 border
-//                 border-[#2F5D50]
-//                 bg-transparent
-//                 px-8
-//                 py-4
-//                 font-medium
-//                 text-[#2F5D50]
-//                 transition-all
-//                 duration-300
-//                 hover:text-white
-//                 hover:shadow-lg
+//                 group 
+//                 relative 
+//                 overflow-hidden 
+//                 inline-flex 
+//                 rounded-2xl 
+//                 border 
+//                 border-[#2F5D50] 
+//                 bg-transparent 
+//                 px-8 
+//                 py-4 
+//                 font-medium 
+//                 text-[#2F5D50] 
+//                 transition-all 
+//                 duration-300 
+//                 hover:text-white 
+//                 hover:shadow-lg 
 //                 hover:shadow-[#2F5D50]/20
 //               "
 //             >
@@ -181,6 +175,11 @@
 //   );
 // };
 
+
+
+
+
+
 "use client";
 
 import Link from "next/link";
@@ -188,19 +187,52 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Container } from "../../common/Container";
-import { SectionHeading } from "../../common/SectionHeading";
+// Removed SectionHeading as we are building a custom animated one inline
+
+// A reusable helper component for Word-by-Word animation
+const AnimatedWords = ({ text, className }: { text: string; className?: string }) => {
+  const words = text.split(" ");
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={{
+        visible: { transition: { staggerChildren: 0.04 } },
+        hidden: {},
+      }}
+      className={`flex flex-wrap ${className || ""}`}
+    >
+      {words.map((word, idx) => (
+        <motion.span
+          key={idx}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { 
+              opacity: 1, 
+              y: 0, 
+              transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } 
+            },
+          }}
+          className="mr-[0.25em] mb-[0.1em]" // Manages spacing between words
+        >
+          {word}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
+};
 
 // A reusable component for the staggered image cards
 const StaggeredImageCard = ({
   src,
   title,
-  // subtitle,
   className,
   delay,
 }: {
   src: string;
   title: string;
-  // subtitle: string;
   className: string;
   delay: number;
 }) => (
@@ -232,21 +264,42 @@ export const ServicesPreview = () => {
     <section className="relative py-16 lg:py-32 bg-[#F8F5EF] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          
           {/* LEFT COLUMN: Text Content & Actions */}
           <div className="flex flex-col items-start max-w-lg lg:pr-10">
-            <SectionHeading
-              eyebrow="Our Services"
-              title="Comprehensive Care for Mind, Body & Wellness"
-              description="Explore our full range of traditional therapies, natural beauty treatments, and holistic wellness programs designed to restore your mind, body, and spirit to its natural state of harmony."
-              align="left"
-            />
+            
+            {/* Custom Animated Section Heading */}
+            <div className="flex flex-col items-start text-left w-full">
+              {/* Eyebrow */}
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5 }}
+                className="text-sm font-bold tracking-widest text-[#C9A86A] uppercase mb-4"
+              >
+                Our Services
+              </motion.span>
+
+              {/* Word-by-Word Title */}
+              <AnimatedWords 
+                text="Comprehensive Care for Mind, Body & Wellness" 
+                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1F3D35] mb-6 leading-tight"
+              />
+
+              {/* Word-by-Word Description */}
+              <AnimatedWords 
+                text="Explore our full range of traditional therapies, natural beauty treatments, and holistic wellness programs designed to restore your mind, body, and spirit to its natural state of harmony." 
+                className="text-base sm:text-lg text-[#2F5D50]/80 leading-relaxed"
+              />
+            </div>
 
             {/* DESKTOP BUTTON: Hidden on mobile, visible on lg screens and up */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.6 }} // Delayed slightly so it appears after text
               className="hidden lg:flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 mt-8 lg:mt-10"
             >
               <Link
@@ -352,6 +405,7 @@ export const ServicesPreview = () => {
               </span>
             </Link>
           </motion.div>
+
         </div>
       </Container>
     </section>
