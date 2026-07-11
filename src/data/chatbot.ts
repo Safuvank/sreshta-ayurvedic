@@ -1,527 +1,284 @@
-// export interface ChatbotFAQ {
-//   id: number;
-//   keywords: string[];
-//   question: string;
-//   answer: string;
-// }
-
-// export const chatbotFAQs: ChatbotFAQ[] = [
-//   {
-//     id: 1,
-//     question: "What are your consultation timings?",
-//     keywords: [
-//       "timing",
-//       "time",
-//       "working hours",
-//       "consultation",
-//       "opening",
-//       "closing",
-//       "open",
-//       "close",
-//       "hours"
-//     ],
-//     answer:
-//       "Our consultation timings are Monday to Saturday from 9:00 AM to 6:00 PM."
-//   },
-
-//   {
-//     id: 2,
-//     question: "How can I book an appointment?",
-//     keywords: [
-//       "appointment",
-//       "book",
-//       "booking",
-//       "consult",
-//       "consultation"
-//     ],
-//     answer:
-//       "You can book an appointment through our website or contact our reception by phone."
-//   },
-
-//   {
-//     id: 3,
-//     question: "Where is the hospital located?",
-//     keywords: [
-//       "location",
-//       "address",
-//       "where",
-//       "map",
-//       "hospital location"
-//     ],
-//     answer:
-//       "Sreshta Ayurveda Hospital is located in Malappuram, Kerala."
-//   },
-
-//   {
-//     id: 4,
-//     question: "What treatments do you provide?",
-//     keywords: [
-//       "treatment",
-//       "therapy",
-//       "services",
-//       "disease",
-//       "panchakarma"
-//     ],
-//     answer:
-//       "We provide Panchakarma, Spine Care, Arthritis Treatment, Skin Care, Women's Health, Lifestyle Disease Management, and many other Ayurvedic treatments."
-//   },
-
-//   {
-//     id: 5,
-//     question: "How can I contact the hospital?",
-//     keywords: [
-//       "contact",
-//       "phone",
-//       "email",
-//       "mobile",
-//       "call",
-//       "number"
-//     ],
-//     answer:
-//       "You can contact us by phone, email, or WhatsApp through the Contact Us page."
-//   }
-// ];
+export interface Message {
+  id: number | string;
+  sender: "user" | "bot";
+  text: string;
+}
 
 export interface ChatbotFAQ {
   id: number;
   keywords: string[];
   question: string;
   answer: string;
+  relatedQuestions?: string[]; // Added relatedQuestions here
 }
+
+// --------------------------------------------------------
+// UI CONFIGURATION DATA
+// --------------------------------------------------------
+
+export const quickQuestions = [
+  {
+    icon: "📅",
+    text: "Book Appointment",
+    query: "How can I book an appointment?",
+  },
+  {
+    icon: "⏰",
+    text: "Working Hours",
+    query: "What are your consultation timings?",
+  },
+  { icon: "🌿", text: "Treatments", query: "What treatments do you provide?" },
+  { icon: "📍", text: "Location", query: "Where is the hospital located?" },
+];
+
+export const defaultSuggestedQuestions = [
+  "What is Panchakarma?",
+  "Do you offer beauty therapies?",
+  "Who are the doctors available?",
+  "Do you have a pharmacy?",
+];
+
+// --------------------------------------------------------
+// CHATBOT KNOWLEDGE BASE (FAQs)
+// --------------------------------------------------------
 
 export const chatbotFAQs: ChatbotFAQ[] = [
   {
     id: 0,
     question: "Greeting",
     keywords: [
-      "hi",
-      "hii",
-      "hiii",
-      "hello",
-      "hey",
-      "heyy",
-      "hlo",
-      "helo",
-      "hai",
-      "hy",
-      "yo",
-      "bro",
-      "buddy",
-      "good morning",
-      "good afternoon",
-      "good evening",
-      "good night",
-      "sup",
-      "wassup",
-      "kooi",
-      "kooy",
+      "hi", "hii", "hiii", "hello", "hey", "heyy", "hlo", "helo", "hai", "hy",
+      "good morning", "good afternoon", "good evening", "sup", "wassup",
     ],
     answer:
-      "Hello! 👋 Welcome to Sreshta Multispeciality Ayurveda Clinic. How can I help you today?\n\nYou can ask me about:\n• Consultation timings\n• Appointments\n• Doctors\n• Treatments\n• Panchakarma\n• Contact details\n• Hospital location",
+      "Hello! 👋 Welcome to Sreshta Multispeciality Ayurveda Clinic. How can I help you today?\n\nYou can ask me about:\n• Booking an appointment\n• Consultation timings\n• Available doctors\n• Our treatments & Panchakarma\n• Clinic location",
+    relatedQuestions: [
+      "How can I book an appointment?",
+      "What are your consultation timings?",
+      "Where is the hospital located?",
+    ],
   },
   {
     id: 1,
     question: "What are your consultation timings?",
     keywords: [
-      "timing",
-      "timings",
-      "time",
-      "hours",
-      "working",
-      "working hours",
-      "consultation",
-      "consult",
-      "opening",
-      "opening hours",
-      "closing",
-      "closing hours",
-      "open",
-      "close",
-      "available",
-      "availability",
-      "schedule",
-      "visit",
+      "timing", "timings", "time", "hours", "working", "working hours",
+      "consultation", "consult", "opening", "closing", "open", "close", "schedule",
     ],
     answer:
-      "Our working hours are Monday to Thursday from 9:30 AM to 5:30 PM, and Friday to Saturday from 9:00 AM to 5:30 PM. We are closed on Sundays.",
+      "Our clinical hours are:\n• Monday to Thursday: 9:30 AM – 5:30 PM\n• Friday & Saturday: 9:00 AM – 5:30 PM\n• Sunday: Closed\n",
+    relatedQuestions: [
+      "How can I book an appointment?",
+      "Where is the hospital located?",
+      "Who are the doctors available?",
+    ],
   },
   {
     id: 2,
     question: "How can I book an appointment?",
     keywords: [
-      "apointment",
-      "appointmnt",
-      "booking",
-      "appointments",
-      "book",
-      "booking",
-      "book appointment",
-      "schedule",
-      "consult",
-      "consultation",
-      "reserve",
-      "reservation",
-      "visit",
-      "doctor",
-      "doctor appointment",
-      "meet doctor",
-      "register",
-      "online booking",
-      "slot",
-      "time slot",
-      "availability",
-      "available",
+      "appointment", "appointmnt", "booking", "book", "schedule", "consult",
+      "reservation", "visit", "meet doctor", "register", "slot", "availability",
     ],
     answer:
-      "You can book an appointment through our website or by contacting our reception via phone or WhatsApp at +91 80758 70435.",
+      "Scheduling a visit is easy! You can book an appointment directly through our website, or you can call / WhatsApp our reception desk at +91 80758 70435.",
+    relatedQuestions: [
+      "What are your consultation timings?",
+      "What diseases and conditions do you treat?",
+      "How can I contact the hospital?",
+    ],
   },
   {
     id: 3,
     question: "Where is the hospital located?",
     keywords: [
-      "location",
-      "address",
-      "where",
-      "map",
-      "hospital",
-      "hospital location",
-      "clinic",
-      "clinic location",
-      "situated",
-      "located",
-      "find",
-      "directions",
-      "route",
-      "near",
-      "nearby",
-      "reach",
-      "google map",
-      "google maps",
-      "landmark",
-      "direction",
+      "location", "address", "where", "map", "hospital", "clinic", "situated",
+      "located", "directions", "route", "near", "reach", "direction",
     ],
     answer:
-      "Sreshta Multispeciality Ayurveda Clinic is located at Pantheeramkavu P.O, Kozhikkode, Kerala, India 673019.",
+      "Sreshta Multispeciality Ayurveda Clinic is located at Pantheeramkavu P.O, Kozhikode, Kerala, India (673019).",
+    relatedQuestions: [
+      "How can I book an appointment?",
+      "What are your consultation timings?",
+      "How can I contact the hospital?",
+    ],
   },
   {
     id: 4,
     question: "What diseases and conditions do you treat?",
     keywords: [
-      "treatment",
-      "treat",
-      "treatments",
-      "therapy",
-      "services",
-      "disease",
-      "diseases",
-      "condition",
-      "conditions",
-      "illness",
-      "illnesses",
-      "disorder",
-      "disorders",
-      "health problem",
-      "health issues",
-      "cure",
-      "heal",
-      "specialization",
-      "speciality",
-      "expertise",
+      "treatment", "treatments", "therapy", "services", "disease", "diseases",
+      "condition", "illness", "disorder", "health issues", "cure", "specialization",
     ],
     answer:
-      "We provide Ayurvedic management for Orthopaedic Diseases (like joint/back pain and arthritis), Gastrointestinal Diseases, Lifestyle Diseases (Diabetes, Blood Pressure), Neurological Diseases (Paralysis, Sciatica), Skin Diseases (Psoriasis, Eczema), Gynecological Disorders, Respiratory Issues, and more.",
+      "We provide holistic Ayurvedic management for a wide range of conditions including:\n• Orthopedic Care (Joint/Back pain, Arthritis)\n• Lifestyle Diseases (Diabetes, Hypertension)\n• Neurological Issues (Paralysis, Sciatica)\n• Skin Conditions (Psoriasis, Eczema)\n• Gynecological & Respiratory Disorders",
+    relatedQuestions: [
+      "What therapies do you offer for back, joint, or neck pain?",
+      "What is Panchakarma?",
+      "Who are the doctors available?",
+    ],
   },
   {
     id: 5,
     question: "How can I contact the hospital?",
     keywords: [
-      "contact",
-      "contact us",
-      "phone",
-      "phone number",
-      "mobile",
-      "mobile number",
-      "number",
-      "call",
-      "telephone",
-      "email",
-      "email address",
-      "mail",
-      "whatsapp",
-      "whatsapp number",
-      "support",
-      "help",
-      "customer care",
-      "reach",
-      "connect",
-      "communication",
+      "contact", "phone", "mobile", "number", "call", "telephone", "email",
+      "mail", "whatsapp", "support", "help", "reach", "connect",
     ],
     answer:
-      "You can contact us by phone or WhatsApp at +91 80758 70435, or email us at sreshtacalicut@gmail.com.",
+      "We're always here to help. You can reach us via:\n📞 Phone / WhatsApp: +91 80758 70435\n✉️ Email: sreshtacalicut@gmail.com",
+    relatedQuestions: [
+      "Where is the hospital located?",
+      "How can I book an appointment?",
+      "What are your consultation timings?",
+    ],
   },
   {
     id: 6,
     question: "Who are the doctors available at Sreshta?",
     keywords: [
-      "doctor",
-      "doctors",
-      "physician",
-      "physicians",
-      "specialist",
-      "specialists",
-      "consultant",
-      "consultants",
-      "medical team",
-      "team",
-      "staff",
-      "expert",
-      "experts",
-      "practitioner",
-      "available doctor",
-      "doctor list",
-      "who",
-      "who is",
-      "available",
-      "medical experts",
+      "doctor", "doctors", "physician", "specialist", "consultant",
+      "medical team", "team", "staff", "expert", "who is", "available doctor",
     ],
     answer:
-      "Our expert team includes Dr. Nanditha M (Chief Consultant Physician - Panchakarma & Cosmetology), Dr. Shaheema Shamsudeen (Gynaecology Specialist), Dr. Madhavikutty M (Counselor), and Mr. Nandakishore M (Yoga Instructor).",
+      "Our expert medical team includes:\n• Dr. Nanditha M (Chief Consultant Physician - Panchakarma & Cosmetology)\n• Dr. Shaheema Shamsudeen (Gynecology Specialist)\n• Dr. Madhavikutty M (Counselor)\n• Mr. Nandakishore M (Yoga Instructor)",
+    relatedQuestions: [
+      "How can I book an appointment?",
+      "Do you offer beauty therapies or cosmetology?",
+      "Are there yoga classes available?",
+    ],
   },
   {
     id: 7,
     question: "What is Panchakarma?",
     keywords: [
-      "panchakarma",
-      "detox",
-      "detoxification",
-      "detox therapy",
-      "purification",
-      "cleanse",
-      "cleansing",
-      "ayurvedic detox",
-      "therapy",
-      "treatment",
-      "five therapies",
-      "five procedures",
-      "body cleansing",
-      "body purification",
-      "rejuvenation",
-      "ayurveda",
-      "ayurvedic treatment",
-      "what is panchakarma",
-      "panchakarma treatment",
-      "panchakarma therapy",
+      "panchakarma", "detox", "detoxification", "purification", "cleanse",
+      "cleansing", "ayurvedic detox", "rejuvenation", "five therapies",
     ],
     answer:
-      "Panchakarma is the supreme detoxification and rejuvenation therapy in Ayurveda. It includes preparatory procedures (Poorvakarma), main detox therapies like Vamanam, Virechanam, Basthi, Nasyam, and Raktamokshana, followed by post-purification care (Paschatkarma).",
+      "Panchakarma is Ayurveda's supreme detoxification and rejuvenation program. It deeply cleanses the body of toxins through specialized therapies like Vamanam, Virechanam, Basthi, Nasyam, and Raktamokshana, helping to restore your natural balance and vitality.",
+    relatedQuestions: [
+      "What diseases and conditions do you treat?",
+      "What therapies do you offer for back, joint, or neck pain?",
+      "How can I book an appointment?",
+    ],
   },
   {
     id: 8,
     question: "Do you offer beauty therapies or cosmetology?",
     keywords: [
-      "beauty",
-      "beauty therapy",
-      "beauty treatment",
-      "cosmetology",
-      "cosmetic",
-      "facial",
-      "skin",
-      "skin care",
-      "hair",
-      "hair care",
-      "pimple",
-      "acne",
-      "melasma",
-      "pigmentation",
-      "anti aging",
-      "glow",
-      "spa",
-      "aesthetic",
-      "beauty services",
-      "skin treatment",
+      "beauty", "cosmetology", "cosmetic", "facial", "skin care", "hair care",
+      "pimple", "acne", "melasma", "pigmentation", "anti aging", "glow", "spa",
     ],
     answer:
-      "Yes, we offer natural Ayurvedic beauty therapies under Dr. Nanditha M. Treatments include Herbal Facials, Hair Spas, Herbal Henna, Protein Treatments, Pimple Treatments, and Melasma Treatments using chemical-free herbs.",
+      "Yes! Under the guidance of Dr. Nanditha M, we offer purely herbal and chemical-free Ayurvedic cosmetology. Our services include Herbal Facials, Hair Spas, Protein Treatments, and specialized care for Acne and Melasma.",
+    relatedQuestions: [
+      "Who are the doctors available?",
+      "Do you have an in-house pharmacy?",
+      "How can I book an appointment?",
+    ],
   },
   {
     id: 9,
     question: "Do you provide pregnancy or postnatal care?",
     keywords: [
-      "pregnancy",
-      "pregnant",
-      "prenatal",
-      "antenatal",
-      "postnatal",
-      "postpartum",
-      "maternity",
-      "maternal",
-      "delivery",
-      "childbirth",
-      "mother care",
-      "new mother",
-      "pregnancy care",
-      "postnatal care",
-      "sutika",
-      "douhrda",
-      "garbhini",
-      "garbhini paricharya",
-      "mother and baby",
-      "women care",
+      "pregnancy", "pregnant", "prenatal", "antenatal", "postnatal", "postpartum",
+      "maternity", "delivery", "mother care", "sutika", "douhrda", "garbhini",
     ],
     answer:
-      "Yes, we offer specialized wellness packages: 'Douhrda' for antenatal (pregnancy) care focusing on fetal development, and 'Sutika' for postnatal care to heal the mother's body, restore strength, and ensure proper lactation.",
+      "Absolutely. We offer specialized wellness packages:\n• 'Douhrda' (Antenatal Care): Focusing on healthy fetal development and maternal strength.\n• 'Sutika' (Postnatal Care): Designed to heal the mother's body, restore energy, and support proper lactation.",
+    relatedQuestions: [
+      "Who are the doctors available?",
+      "Are there yoga classes available?",
+      "Do you offer counselling or mental health support?",
+    ],
   },
   {
     id: 10,
     question: "Are there yoga classes available?",
     keywords: [
-      "yoga",
-      "yoga classes",
-      "yoga therapy",
-      "meditation",
-      "meditate",
-      "asana",
-      "asanas",
-      "pranayama",
-      "breathing exercises",
-      "fitness",
-      "wellness",
-      "instructor",
-      "trainer",
-      "yoga instructor",
-      "yoga teacher",
-      "classes",
-      "sessions",
-      "exercise",
-      "mindfulness",
-      "relaxation",
+      "yoga", "meditation", "asana", "pranayama", "breathing", "fitness",
+      "instructor", "trainer", "classes", "sessions", "exercise", "mindfulness",
     ],
     answer:
-      "Yes, our Yoga Instructor Mr. Nandakishore M conducts both online and offline sessions for General Yoga, Therapeutic Yoga (tailored for medical conditions), Pranayamam (breathwork), and Meditation.",
+      "Yes! Our specialized Yoga Instructor, Mr. Nandakishore M, conducts both online and offline sessions. We offer General Yoga, Therapeutic Yoga tailored for specific medical conditions, Pranayama (breathwork), and Meditation.",
+    relatedQuestions: [
+      "Who are the doctors available?",
+      "Do you offer counselling or mental health support?",
+      "How can I book an appointment?",
+    ],
   },
   {
     id: 11,
     question: "Do you offer counselling or mental health support?",
     keywords: [
-      "counselling",
-      "counseling",
-      "mental",
-      "mental health",
-      "stress",
-      "anxiety",
-      "depression",
-      "psychology",
-      "psychologist",
-      "therapy",
-      "therapist",
-      "marital",
-      "marriage",
-      "relationship",
-      "family counselling",
-      "child counselling",
-      "kids",
-      "adolescent",
-      "emotional",
-      "wellbeing",
+      "counselling", "counseling", "mental", "stress", "anxiety", "depression",
+      "psychology", "psychologist", "therapy", "therapist", "marital", "family",
     ],
     answer:
-      "Yes, our Counselor Dr. Madhavikutty M provides professional counselling for mental stress, excessive tension, postpartum depression, marital (pre and post) issues, and learning disabilities in children.",
+      "Yes, mental well-being is a core part of holistic health. Our Counselor, Dr. Madhavikutty M, provides expert support for stress, anxiety, postpartum depression, marital issues, and childhood learning disabilities.",
+    relatedQuestions: [
+      "Are there yoga classes available?",
+      "Do you provide pregnancy or postnatal care?",
+      "Who are the doctors available?",
+    ],
   },
   {
     id: 12,
     question: "Do you have an in-house pharmacy?",
     keywords: [
-      "pharmacy",
-      "pharmacist",
-      "medicine",
-      "medicines",
-      "medication",
-      "drugs",
-      "herbal",
-      "ayurvedic medicine",
-      "ayurvedic products",
-      "products",
-      "shop",
-      "store",
-      "buy",
-      "purchase",
-      "dispensary",
-      "medical store",
-      "in house pharmacy",
-      "available medicines",
-      "prescription",
-      "remedy",
+      "pharmacy", "medicine", "medicines", "medication", "drugs", "herbal",
+      "ayurvedic medicine", "products", "shop", "store", "buy", "dispensary",
     ],
     answer:
-      "Yes, our fully-stocked authentic Ayurvedic pharmacy provides Kashayas, Arishtams, Lehyas, Choornas, Tailas, and herbal cosmetics like soaps, shampoos, and hair oils. All products are sourced from trusted manufacturers.",
+      "We do. Our fully-stocked authentic Ayurvedic pharmacy provides Kashayas, Arishtams, Lehyas, Choornas, Tailas, and premium herbal cosmetics. All our medicines are sourced from highly trusted, traditional manufacturers.",
+    relatedQuestions: [
+      "What diseases and conditions do you treat?",
+      "Do you offer beauty therapies or cosmetology?",
+      "How can I contact the hospital?",
+    ],
   },
   {
     id: 13,
     question: "What therapies do you offer for back, joint, or neck pain?",
     keywords: [
-      "back pain",
-      "backache",
-      "joint pain",
-      "knee pain",
-      "neck pain",
-      "shoulder pain",
-      "hip pain",
-      "arthritis",
-      "osteoarthritis",
-      "spondylosis",
-      "slipped disc",
-      "muscle pain",
-      "body pain",
-      "massage",
-      "abhyanga",
-      "kizhi",
-      "basti",
-      "pain management",
-      "pain therapy",
-      "orthopedic",
+      "back pain", "joint pain", "knee pain", "neck pain", "shoulder pain",
+      "arthritis", "spondylosis", "slipped disc", "muscle pain", "massage", "kizhi", "orthopedic",
     ],
     answer:
-      "We offer targeted Ayurvedic therapies for pain management, including Abhyangam (massage), Janu Basti (for knees), Kati Basti (for lower back), Greeva Vasti (for neck), and various Kizhi treatments like Podikizhi, Elakizhi, and Njavarakizhi.",
+      "We offer highly effective, targeted Ayurvedic therapies for pain relief, including Abhyangam (therapeutic massage), Janu Basti (for knees), Kati Basti (lower back), Greeva Vasti (neck), and various Kizhi (herbal pouch) treatments.",
+    relatedQuestions: [
+      "What is Panchakarma?",
+      "How can I book an appointment?",
+      "Who are the doctors available?",
+    ],
   },
   {
     id: 14,
     question: "Thanks",
     keywords: [
-      "thanks",
-      "thank you",
-      "thankyou",
-      "thx",
-      "tnx",
-      "ok thanks",
-      "great",
-      "awesome",
+      "thanks", "thank you", "thankyou", "thx", "tnx", "great", "awesome", "perfect",
     ],
     answer:
-      "You're welcome! 😊 If you have any other questions about our doctors, treatments, appointments, or services, feel free to ask.",
+      "You're very welcome! 😊 If you have any other questions or if you'd like to schedule a visit, just let me know.",
+    relatedQuestions: [
+      "How can I book an appointment?",
+      "What are your consultation timings?",
+      "Where is the hospital located?",
+    ],
   },
   {
     id: 15,
     question: "Goodbye",
     keywords: [
-      "bye",
-      "goodbye",
-      "see you",
-      "see ya",
-      "take care",
-      "exit",
-      "quit",
-      "close",
-      "later",
+      "bye", "goodbye", "see you", "take care", "exit", "quit", "close", "later",
     ],
     answer:
-      "Thank you for contacting Sreshta Multispeciality Ayurveda Clinic. Have a wonderful day! 🌿",
+      "Thank you for reaching out to Sreshta Multispeciality Ayurveda Clinic. Have a wonderful, healthy day! 🌿",
+    relatedQuestions: [
+      "How can I book an appointment?",
+      "What treatments do you provide?",
+      "Where is the hospital located?",
+    ],
   },
-];
-
-export const suggestedQuestions = [
-  "What treatments do you provide?",
-  "How can I book an appointment?",
-  "What are your consultation timings?",
-  "Where is the hospital located?",
-  "How can I contact the hospital?",
 ];

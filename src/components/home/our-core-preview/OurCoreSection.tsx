@@ -93,16 +93,6 @@
 //   );
 // };
 
-
-
-
-
-
-
-
-
-
-
 "use client";
 
 import Link from "next/link";
@@ -119,8 +109,8 @@ export const OurCoreSection = () => {
         {/* Centered Header */}
         <div className="mb-12 lg:mb-20">
           <SectionHeading
-            eyebrow="Where We Support"
-            title="Balance and Healing"
+            eyebrow="Our Core"
+            title="Comprehensive Ayurvedic Care for Every Health Concern"
             align="center"
             isDark={true}
           />
