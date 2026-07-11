@@ -57,43 +57,44 @@ export const TreatmentsPreview = () => {
   // for desktop and mobile placements.
   const ActionButtons = () => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.4 }}
-    >
-      <Link
-        href="/treatments"
-        className="
-          group
-          relative
-          overflow-hidden
-          inline-flex
-          rounded-xl
-          border
-          border-[#2F5D50]
-          bg-transparent
-          px-8
-          py-4
-          font-medium
-          text-[#2F5D50]
-          transition-all
-          duration-300
-          hover:text-white
-          hover:shadow-lg
-          hover:shadow-[#2F5D50]/20
-        "
-      >
-        {/* Animated Background (Slides up on hover) */}
-        <span className="absolute inset-0 translate-y-full bg-[#2F5D50] transition-transform duration-300 ease-out group-hover:translate-y-0" />
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="flex w-full justify-center md:justify-start" // <-- Added this line
+>
+  <Link
+    href="/treatments"
+    className="
+      group
+      relative
+      overflow-hidden
+      inline-flex
+      rounded-xl
+      border
+      border-[#2F5D50]
+      bg-transparent
+      px-8
+      py-4
+      font-medium
+      text-[#2F5D50]
+      transition-all
+      duration-300
+      hover:text-white
+      hover:shadow-lg
+      hover:shadow-[#2F5D50]/20
+    "
+  >
+    {/* Animated Background (Slides up on hover) */}
+    <span className="absolute inset-0 translate-y-full bg-[#2F5D50] transition-transform duration-300 ease-out group-hover:translate-y-0" />
 
-        {/* Content Wrapper (Keeps text and icon above the background) */}
-        <span className="relative z-10 flex items-center gap-3">
-          View All Treatments
-          <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-        </span>
-      </Link>
-    </motion.div>
+    {/* Content Wrapper (Keeps text and icon above the background) */}
+    <span className="relative z-10 flex items-center gap-3">
+      View All Treatments
+      <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+    </span>
+  </Link>
+</motion.div>
   );
 
   return (

@@ -91,7 +91,8 @@ export const ServicesPreview = () => {
           {/* LEFT COLUMN: Text Content & Actions */}
           <div className="flex flex-col items-start max-w-lg lg:pr-10">
             {/* Custom Animated Section Heading */}
-            <div className="flex flex-col items-start text-left w-full">
+         {/* Custom Animated Section Heading */}
+            <div className="flex flex-col items-center text-center md:items-start md:text-left w-full">
               {/* Eyebrow */}
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
@@ -106,16 +107,17 @@ export const ServicesPreview = () => {
               {/* Word-by-Word Title */}
               <AnimatedWords
                 text="Comprehensive Care for Mind, Body & Wellness"
-                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1F3D35] mb-6 leading-tight"
+                // Added justify-center md:justify-start here 👇
+                className="justify-center md:justify-start text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1F3D35] mb-6 leading-tight"
               />
 
               {/* Word-by-Word Description */}
               <AnimatedWords
                 text="Explore our full range of traditional therapies, natural beauty treatments, and holistic wellness programs designed to restore your mind, body, and spirit to its natural state of harmony."
-                className="text-base sm:text-lg text-[#2F5D50]/80 leading-relaxed"
+                // Added justify-center md:justify-start here 👇
+                className="justify-center md:justify-start text-base sm:text-lg text-[#2F5D50]/80 leading-relaxed text-center md:text-left"
               />
             </div>
-
             {/* DESKTOP BUTTON: Hidden on mobile, visible on lg screens and up */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -159,7 +161,7 @@ export const ServicesPreview = () => {
           <div className="relative w-full h-auto lg:h-150 mt-2 lg:mt-0 grid grid-cols-2 gap-3 sm:gap-4 lg:block">
             {/* 1. Top Image */}
             <StaggeredImageCard
-              src="/images/services/ayurveda-thrapies.png"
+              src="/images/services/each/nasyam.png"
               title="Ayurveda Therapies"
               className="relative col-span-2 h-55 sm:h-75 lg:absolute lg:top-0 lg:left-0 lg:w-[50%] lg:h-[65%] z-10"
               delay={0.2}

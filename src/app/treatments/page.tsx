@@ -1,6 +1,11 @@
 import { TreatmentsHero } from "@/src/components/pages/treatment/TreatmentHero";
 import { TreatmentsShowcase } from "@/src/components/pages/treatment/TreatmentShowcase";
 
+import { metadata } from "./metadata";
+
+export { metadata };
+
+
 export default function TreatmentsPage() {
   return (
     <main className="min-h-screen bg-white">

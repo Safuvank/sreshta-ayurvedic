@@ -10,6 +10,10 @@ import { WrittenReviewsSection } from "@/src/components/pages/testimonials/Writt
 import { GoogleReviewsSection } from "@/src/components/pages/testimonials/GoogleReviewsSection";
 import { ConsultationCTA } from "@/src/components/home/consultation-cta/ConsultationCTA";
 
+// import { metadata } from "./metadata";
+
+// export { metadata };
+
 
 const ALL_CATEGORIES = "All Treatments";
 

@@ -2,7 +2,11 @@ import { ServicesHero } from "@/src/components/pages/services/ServicesHero";
 // import { ServicesProcess } from "@/src/components/pages/services/ServicesProcess";
 import { ServicesShowcase } from "@/src/components/pages/services/ServicesShowcase";
 import { ServicesBenefits } from "@/src/components/pages/services/ServicesBenefits";
-import { AboutCTA } from "@/src/components/pages/about/AboutCTA"; // Reusing your existing CTA!
+import { AboutCTA } from "@/src/components/pages/about/AboutCTA"; 
+
+import { metadata } from "./metadata";
+
+export { metadata };
 
 export default function ServicesPage() {
   return (

@@ -1,6 +1,9 @@
 import { DoctorsHero } from "@/src/components/pages/doctors/DoctorsHero";
 import { DoctorPreviewGrid } from "@/src/components/pages/doctors/DoctorsPreviewGrid";
 import { Container } from "@/src/components/common/Container";
+import { metadata } from "./metadata";
+
+export { metadata };
 
 export default function DoctorsPage() {
   return (

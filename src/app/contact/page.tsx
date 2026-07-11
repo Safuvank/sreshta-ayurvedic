@@ -6,11 +6,15 @@ import { WorkingHours } from "@/src/components/pages/contact/WorkingHours";
 import { ContactSplitBlock } from "@/src/components/pages/contact/ContactSplitBlock";
 import { ContactImage } from "@/src/components/pages/contact/ContactImage";
 
-export const metadata = {
-  title: "Contact Us | Sreshta Ayurvedic Hospital",
-  description:
-    "Reach out to Sreshta Ayurvedic Hospital for consultations, appointments, and holistic treatment inquiries.",
-};
+// export const metadata = {
+//   title: "Contact Us | Sreshta Ayurvedic Hospital",
+//   description:
+//     "Reach out to Sreshta Ayurvedic Hospital for consultations, appointments, and holistic treatment inquiries.",
+// };
+
+import { metadata } from "./metadata";
+
+export { metadata };
 
 export default function ContactPage() {
   return (

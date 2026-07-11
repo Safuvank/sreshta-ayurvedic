@@ -95,7 +95,7 @@ export const VideoGallery = () => {
 
   return (
     <>
-      <section className="bg-[#121A16] py-15 lg:py-16 overflow-hidden border-t border-white/5 relative z-10">
+      <section className="bg-[#121A16] py-15 lg:py-16 overflow-hidden border-t border-white/5 relative z-10 mb-10">
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
             <motion.div

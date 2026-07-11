@@ -61,7 +61,7 @@ export const GalleryHero = () => {
           >
             <div className="w-8 md:w-12 h-[1px] bg-[#C9A86A]" />
             <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A86A]">
-              A Glimpse Inside
+              Gallery
             </span>
           </motion.div>
 

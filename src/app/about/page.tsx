@@ -6,11 +6,15 @@ import { FacilitiesShowcase } from "@/src/components/pages/about/FacilitiesShowc
 import { ConsultationCTA } from "@/src/components/home/consultation-cta/ConsultationCTA";
 import { WhyChooseUsAlt } from "@/src/components/pages/about/WhyChooseUs";
 
-export const metadata = {
-  title: "About Us | Sreshta Ayurvedic Hospital",
-  description:
-    "Learn about Sreshta Ayurvedic Hospital's journey, mission, and commitment to authentic, personalized Ayurvedic healing and holistic healthcare.",
-};
+import { metadata } from "./metadata";
+
+export { metadata };
+
+// export const metadata = {
+//   title: "About Us | Sreshta Ayurvedic Hospital",
+//   description:
+//     "Learn about Sreshta Ayurvedic Hospital's journey, mission, and commitment to authentic, personalized Ayurvedic healing and holistic healthcare.",
+// };
 
 export default function AboutPage() {
   return (
@@ -20,7 +24,6 @@ export default function AboutPage() {
       <MissionVisionValues />
       <WhyChooseUsAlt/>
       <OrganizationOverview />
-      
       <FacilitiesShowcase />
      <ConsultationCTA/>
     </main>

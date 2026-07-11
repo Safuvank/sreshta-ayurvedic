@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import { treatments } from "@/src/data/treatments"; // Adjust path if needed
 import { TreatmentDetailClient } from "@/src/components/pages/treatment/detailpage/TreatmentDetailClient";
 
+import { generateMetadata } from "./generateMetadata";
+
+export { generateMetadata };
+
 // Define the props type
 interface TreatmentPageProps {
   params: Promise<{

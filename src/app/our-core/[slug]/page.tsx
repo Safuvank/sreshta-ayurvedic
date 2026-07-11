@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import { ourCoreData } from "@/src/data/specializations-core";
 import { SpecializationDetailClient } from "@/src/components/pages/core/detailpage/SpecializationDetailClient";
 
+// import { generateMetadata } from "./generatemetadata";
+
+// export { generateMetadata };
+
 // Define the props type exactly like your treatment page
 interface SpecializationPageProps {
   params: Promise<{
