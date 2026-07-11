@@ -4,7 +4,7 @@ export const services = [
     title: "Ayurveda Therapies",
     description:
       "Traditional therapies designed to restore balance and wellness.",
-    image: "/images/services/ayurveda-thrapies.png",
+    image: "/images/services/each/nasyam.png",
     slug: "ayurveda-therapies",
     hasDetailPage: true,
     longDescription:
