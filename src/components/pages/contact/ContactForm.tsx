@@ -125,6 +125,7 @@ export default function ContactForm() {
       </div>
 
       {/* Row 2: Phone & Treatment */}
+      {/* Row 2: Phone & Treatment */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5">
         <div className="flex flex-col">
           <div
@@ -140,12 +141,12 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={handlePhoneChange}
               className="outline-none 
-                [&_.PhoneInputInput]:bg-transparent 
-                [&_.PhoneInputInput]:border-none 
-                [&_.PhoneInputInput]:outline-none 
-                [&_.PhoneInputInput]:text-white
-                [&_.PhoneInputCountryIcon--border]:border-none
-                [&_.PhoneInputCountryIcon]:shadow-none"
+          [&_.PhoneInputInput]:bg-transparent 
+          [&_.PhoneInputInput]:border-none 
+          [&_.PhoneInputInput]:outline-none 
+          [&_.PhoneInputInput]:text-white
+          [&_.PhoneInputCountryIcon--border]:border-none
+          [&_.PhoneInputCountryIcon]:shadow-none"
             />
           </div>
           <div className="h-6 pt-1">
@@ -161,40 +162,60 @@ export default function ContactForm() {
               name="treatment"
               value={formData.treatment}
               onChange={handleChange}
-              className="w-full bg-transparent text-gray-300 p-3.5 outline-none appearance-none cursor-pointer"
+              className="w-full bg-transparent text-white p-3.5 outline-none appearance-none cursor-pointer"
             >
-              <option
-                className="bg-[#1A362E] text-white"
-                value="General Consultation"
-              >
+              <option className="bg-[#1A362E]" value="General Consultation">
                 General Consultation
               </option>
-              <option className="bg-[#1A362E] text-white" value="Weight Loss">
-                Weight Loss
-              </option>
-              <option className="bg-[#1A362E] text-white" value="Diabetes Care">
-                Diabetes Care
+              <option className="bg-[#1A362E]" value="Panchakarma Detox">
+                Panchakarma Detox
               </option>
               <option
-                className="bg-[#1A362E] text-white"
-                value="Arthritis Care"
+                className="bg-[#1A362E]"
+                value="Orthopedic & Pain Management"
               >
-                Arthritis Care
+                Orthopedic & Pain Management
+              </option>
+              <option className="bg-[#1A362E]" value="Ayurvedic Cosmetology">
+                Ayurvedic Cosmetology
+              </option>
+              <option
+                className="bg-[#1A362E]"
+                value="Lifestyle Disease Management"
+              >
+                Lifestyle Disease Management
+              </option>
+              <option
+                className="bg-[#1A362E]"
+                value="Pregnancy & Postnatal Care"
+              >
+                Pregnancy & Postnatal Care
+              </option>
+              <option className="bg-[#1A362E]" value="Stress & Mental Health">
+                Stress & Mental Health
+              </option>
+              <option
+                className="bg-[#1A362E]"
+                value="Yoga & Therapeutic Sessions"
+              >
+                Yoga & Therapeutic Sessions
+              </option>
+              <option className="bg-[#1A362E]" value="Other">
+                Other
               </option>
             </select>
-            {/* Custom Dropdown Arrow for Dark Theme */}
+
+            {/* Custom Dropdown Arrow */}
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
               <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                 <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
               </svg>
             </div>
           </div>
-          <div className="h-6 pt-1">
-            {/* Empty space block to keep this column exactly the same height as the Phone column */}
-          </div>
         </div>
       </div>
 
+      
       {/* Row 3: Message / Symptoms */}
       <div className="flex flex-col">
         <textarea

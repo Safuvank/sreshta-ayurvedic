@@ -7,7 +7,7 @@ import { CTAButtons } from "./CTAButtons";
 export const ConsultationCTA = () => {
   return (
     // The section background is light to make the dark card pop
-    <section className="relative pb-7 lg:py-6 bg-[#FAFAFA] overflow-hidden">
+    <section className="relative pb-7 lg:py-6 bg-[#FAFAFA] overflow-visible">
       <Container>
         {/* The Floating Premium Card */}
         <motion.div

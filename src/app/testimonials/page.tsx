@@ -8,6 +8,8 @@ import { FilterBar } from "@/src/components/pages/testimonials/FilterBar";
 import { VideoCarouselSection } from "@/src/components/pages/testimonials/VideoSection";
 import { WrittenReviewsSection } from "@/src/components/pages/testimonials/WrittenReviewsSection";
 import { GoogleReviewsSection } from "@/src/components/pages/testimonials/GoogleReviewsSection";
+import { ConsultationCTA } from "@/src/components/home/consultation-cta/ConsultationCTA";
+
 
 const ALL_CATEGORIES = "All Treatments";
 
@@ -58,6 +60,8 @@ export default function PatientStoriesPage() {
       <WrittenReviewsSection reviews={filteredReviews} />
 
       <GoogleReviewsSection/>
+      <ConsultationCTA/>
     </main>
+    
   );
 }

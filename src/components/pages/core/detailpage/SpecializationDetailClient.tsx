@@ -278,7 +278,7 @@ export const SpecializationDetailClient = ({ category }: { category: any }) => {
                   className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold tracking-widest text-[#C9A86A] uppercase hover:text-white transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  Back to Specializations
+                  Back to Core
                 </Link>
               </motion.div>
             </div>

@@ -4,7 +4,7 @@ import { quickQuestions } from "@/src/data/chatbot";
 
 export default function QuickQuestionGrid({ onSelect }: { onSelect: (q: string) => void }) {
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-2 gap-3 pb-5">
       {quickQuestions.map((item, idx) => (
         <button
           key={idx}
