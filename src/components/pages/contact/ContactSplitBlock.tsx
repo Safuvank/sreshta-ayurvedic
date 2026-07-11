@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { contactInfo } from "@/src/data/contact";
 import { Container } from "../../common/Container";
+import ContactForm from "./ContactForm";
 
 export const ContactSplitBlock = () => {
   return (
@@ -45,7 +46,17 @@ export const ContactSplitBlock = () => {
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Email Us</h4>
                   <p className="text-gray-600 font-light text-sm">
-                    {contactInfo.email}
+                    {contactInfo.email.map((email, index) => (
+                      <span key={index}>
+                        <a
+                          href={`mailto:${email}`}
+                          className="hover:text-primary transition-colors"
+                        >
+                          {email}
+                        </a>
+                        {index < contactInfo.email.length - 1 && <br />}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
@@ -104,93 +115,7 @@ export const ContactSplitBlock = () => {
               Send us a message
             </h3>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              {/* Row 1: Name & Treatment */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-black focus:outline-none focus:border-[#2F5D50] focus:ring-1 focus:ring-[#2F5D50] focus:bg-white transition-all font-light text-sm placeholder:text-gray-400"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">
-                    Treatment
-                  </label>
-                  <select className="w-full px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-black focus:outline-none focus:border-[#2F5D50] focus:ring-1 focus:ring-[#2F5D50] focus:bg-white transition-all font-light text-sm appearance-none">
-                    <option value="" className="text-gray-400">
-                      Select Treatment
-                    </option>
-                    <option value="panchakarma">Panchakarma</option>
-                    <option value="orthopedic">Orthopedic Care</option>
-                    <option value="rejuvenation">Rejuvenation</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Row 2: Phone & Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="w-full px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-black focus:outline-none focus:border-[#2F5D50] focus:ring-1 focus:ring-[#2F5D50] focus:bg-white transition-all font-light text-sm placeholder:text-gray-400"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="w-full px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-black focus:outline-none focus:border-[#2F5D50] focus:ring-1 focus:ring-[#2F5D50] focus:bg-white transition-all font-light text-sm placeholder:text-gray-400"
-                  />
-                </div>
-              </div>
-
-              {/* Row 3: Subject */}
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-black focus:outline-none focus:border-[#2F5D50] focus:ring-1 focus:ring-[#2F5D50] focus:bg-white transition-all font-light text-sm placeholder:text-gray-400"
-                />
-              </div>
-
-              {/* Row 4: Message */}
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">
-                  Message
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Message"
-                  className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-black focus:outline-none focus:border-[#2F5D50] focus:ring-1 focus:ring-[#2F5D50] focus:bg-white transition-all font-light text-sm placeholder:text-gray-400 resize-none"
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#2F5D50] px-8 py-4 font-medium text-white transition-all duration-300 hover:bg-[#254A40] hover:shadow-lg"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
+            <ContactForm/>
           </div>
         </div>
       </Container>

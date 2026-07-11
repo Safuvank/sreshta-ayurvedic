@@ -6,7 +6,7 @@ import { ServicePreviewGrid } from "@/src/components/home/services-preview/Servi
 
 export const ServicesShowcase = () => {
   return (
-    <section className="py-20 lg:py-16 bg-[#F8F5EF]">
+    <section className="py-10 lg:py-8 bg-[#F8F5EF]">
       <Container>
         {/* The Grid Component without limit to show everything */}
         <ServicePreviewGrid />

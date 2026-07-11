@@ -69,7 +69,7 @@ export const TreatmentsPreview = () => {
           relative
           overflow-hidden
           inline-flex
-          rounded-2xl
+          rounded-xl
           border
           border-[#2F5D50]
           bg-transparent
@@ -162,7 +162,7 @@ export const TreatmentsPreview = () => {
               <div className="hidden md:block space-y-4 lg:pl-8 md:mb-12">
                 <AnimatedWords
                   text="Experience deep healing and detoxification with our specialized Ayurvedic treatments. We focus on treating the root cause of ailments to bring lasting vitality and peace."
-                  className="text-[#4A4A4A] text-sm md:text-base leading-relaxed"
+                  className="text-base sm:text-lg text-[#2F5D50]/80 leading-relaxed"
                   delay={0.3} // slight delay so it starts animating after the title
                 />
               </div>
